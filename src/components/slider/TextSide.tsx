@@ -1,7 +1,8 @@
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import SectionButtonLink from '../global/SectionButtonLink';
 import { useContext } from 'react';
 import { SliderContext } from './context';
+import BackButton from './buttons/BackButton';
+import NextButton from './buttons/NextButton';
 
 function TextSide() {
   const { slide } = useContext(SliderContext);
@@ -16,12 +17,8 @@ function TextSide() {
         <SectionButtonLink className="dark-button">استشارة مجانية</SectionButtonLink>
       </div>
       <div className="flex gap-3 max-lg:justify-center">
-        <button className="text-[#A7FFBC1C] text-3xl rounded-full w-14 h-14 flex justify-center items-center">
-          <IoIosArrowForward />
-        </button>
-        <button className="bg-[#FFFFFF0D] text-[#A7FFBC] hover:bg-[#A7FFBC] hover:text-[black] duration-medium text-3xl rounded-full w-14 h-14 flex justify-center items-center">
-          <IoIosArrowBack />
-        </button>
+        <BackButton />
+        <NextButton />
       </div>
     </div>
   );

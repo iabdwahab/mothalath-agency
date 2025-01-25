@@ -1,14 +1,6 @@
-export const sliderData: {
-  id: number;
-  textSide: {
-    title: string;
-    description: string;
-  };
-  ImageSide: {
-    title: string;
-    description: string;
-  };
-}[] = [
+import { slideDataType } from './types';
+
+export const sliderData: slideDataType[] = [
   {
     id: 1,
     textSide: {

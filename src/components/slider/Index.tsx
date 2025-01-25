@@ -11,6 +11,7 @@ function SliderSection() {
   return (
     <SliderContext.Provider
       value={{
+        slidesLength: sliderData.length,
         currentSlideIndex,
         setCurrentSlideIndex,
         slide: sliderData[currentSlideIndex],
