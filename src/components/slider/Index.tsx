@@ -5,7 +5,7 @@ import TextSide from './TextSide';
 
 function SliderSection() {
   return (
-    <section className="py-section bg-lines bg-no-repeat bg-contain">
+    <section className="py-section bg-lines bg-contain max-lg:bg-no-repeat">
       <Container className="grid lg:grid-cols-2 gap-12">
         <TextSide />
         <div className="w-full max-lg:-order-1">

@@ -14,7 +14,7 @@ function TextSide() {
         <button className="text-[#A7FFBC1C] text-3xl rounded-full w-14 h-14 flex justify-center items-center">
           <IoIosArrowForward />
         </button>
-        <button className="bg-[#FFFFFF0D] text-[#A7FFBC] text-3xl rounded-full w-14 h-14 flex justify-center items-center">
+        <button className="bg-[#FFFFFF0D] text-[#A7FFBC] hover:bg-[#A7FFBC] hover:text-[black] duration-medium text-3xl rounded-full w-14 h-14 flex justify-center items-center">
           <IoIosArrowBack />
         </button>
       </div>

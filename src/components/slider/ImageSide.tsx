@@ -21,8 +21,8 @@ function ImageSide() {
         </div>
       </div>
 
-      <div className="md:w-4/5 mx-auto rounded-[40px] overflow-hidden bg-white">
-        <img src={sliderPhoto} alt="Photo" className="w-full object-cover" />
+      <div className="max-w-[450px] mx-auto rounded-[40px] overflow-hidden bg-white">
+        <img src={sliderPhoto} alt="Photo" className="w-full max-h-[500px] object-cover" />
       </div>
 
       <div className="grid grid-cols-[1fr,auto] gap-12 relative pt-4 pr-4 -mt-[100px] mr-auto w-fit bg-[#79FD730D] rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
