@@ -31,6 +31,9 @@ export default {
       gridTemplateColumns: {
         'question-card': '28px 1fr 28px',
       },
+      backgroundImage: {
+        lines: 'url("/imgs/slider/line.svg")',
+      },
     },
   },
   plugins: [],
