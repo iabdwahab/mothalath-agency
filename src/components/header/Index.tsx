@@ -1,3 +1,4 @@
+import { LuSquareMenu } from 'react-icons/lu';
 import Container from '../Container';
 
 import logoText from '/logo-text.png';
@@ -22,20 +23,23 @@ function Header() {
 
   return (
     <header>
-      <Container className="fixed w-full top-3 left-0 right-0 z-50 max-w-[940px] flex justify-between items-center h-[70px] px-8 py-4 rounded-full border-[0.1px] border-[#ffffff34] bg-[#1E1E1E1A] bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100">
+      <Container className="fixed w-full top-3 left-0 right-0 z-50 max-w-[940px] flex justify-between items-center py-4 px-6 rounded-full border-[0.1px] border-[#ffffff34] bg-[#1E1E1E1A] bg-clip-padding backdrop-filter backdrop-blur bg-opacity-10 backdrop-saturate-100 backdrop-contrast-100">
         <div>
           <a href="#">
             <img src={logoText} alt="Logo" className="w-24" />
           </a>
         </div>
-        <nav>
+        <nav className="max-md:hidden">
           <ul className="flex gap-12">{navLinksElements}</ul>
         </nav>
-        <div>
+        <div className="max-md:hidden">
           <a href="#" className="px-12 py-[6px] text-sm font-black bg-main text-background hover:bg-background hover:text-main hover:outline outline-1 outline-main duration-medium rounded-full">
             تواصل معنا
           </a>
         </div>
+        <button className="md:hidden text-2xl bg-main text-background hover:bg-background hover:text-main duration-medium p-1 rounded-md">
+          <LuSquareMenu />
+        </button>
       </Container>
     </header>
   );
