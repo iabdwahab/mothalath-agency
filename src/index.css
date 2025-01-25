@@ -1,0 +1,25 @@
+/* Open Sans Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: black;
+}
+
+h4 {
+  @apply text-xl font-bold;
+}
+
+.light-button {
+  @apply bg-background text-black hover:bg-black hover:text-background border border-background duration-150;
+}
+.dark-button {
+  @apply bg-black text-background hover:bg-background hover:text-black border border-background  duration-150;
+}
+
+.grid-cards-cols {
+  @apply grid md:grid-cols-2 lg:grid-cols-3;
+}
