@@ -1,11 +1,16 @@
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import SectionButtonLink from '../global/SectionButtonLink';
+import { useContext } from 'react';
+import { SliderContext } from './context';
 
 function TextSide() {
+  const { slide } = useContext(SliderContext);
+  const { textSide: data } = slide;
+
   return (
     <div className="flex flex-col max-lg:text-center gap-8 justify-center">
-      <h4 className="text-3xl">حول حلمك إلى واقع.. ابنِ متجرك الإلكتروني الخاص بك معنا!</h4>
-      <p className="font-light text-xl">هل لديك منتجات أو خدمات مميزة ترغب في عرضها للعالم؟ هل تبحث عن طريقة فعالة لزيادة مبيعاتك وتوسيع نطاق عملك؟ نحن هنا لمساعدتك في تحقيق ذلك</p>
+      <h4 className="text-3xl">{data.title}</h4>
+      <p className="font-light text-xl">{data.description}</p>
       <div className="flex max-md:flex-col max-lg:justify-center gap-3">
         <SectionButtonLink className="light-button">احجز خدمتك الآن</SectionButtonLink>
         <SectionButtonLink className="dark-button">استشارة مجانية</SectionButtonLink>
