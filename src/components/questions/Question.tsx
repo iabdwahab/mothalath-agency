@@ -16,14 +16,14 @@ function Question() {
         <div className="bg-main flex justify-center items-center w-7 rounded-full aspect-square">
           <img src={questionMark} alt="Icon" className="w-[10px]" />
         </div>
-        <p className="font-bold text-start text-2xl">ما هو التسويق الإلكتروني؟ ولماذا هو مهم لعملي؟</p>
+        <p className="font-bold text-start text-lg md:text-xl">ما هو التسويق الإلكتروني؟ ولماذا هو مهم لعملي؟</p>
         <div className="bg-background flex justify-center items-center w-[30px] rounded-full aspect-square">
           <img src={plusIcon} alt="Show more" className={`w-4 duration-medium ${open ? 'rotate-45' : ''}`} />
         </div>
       </button>
 
       <div className={`col-start-2 font-thin max-h-0 overflow-hidden duration-300`} style={{ maxHeight: open ? paragraphRef.current?.offsetHeight : '0' }}>
-        <p ref={paragraphRef} className="pt-4 text-2xl">
+        <p ref={paragraphRef} className="pt-4 text-lg">
           يعتمد الوقت الذي تستغرقه لرؤية النتائج على العديد من العوامل، بما في ذلك طبيعة عملك، وحجم المنافسة، والميزانية المخصصة. ومع ذلك، نعمل على تقديم نتائج ملموسة في أقرب وقت ممكن.
         </p>
       </div>

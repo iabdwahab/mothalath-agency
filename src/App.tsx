@@ -4,7 +4,7 @@ import Questions from './components/questions/Index';
 // import SliderSection from './components/slider/Index';
 import Testimonials from './components/testimonials/Index';
 
-import heroImage from '/imgs/hero.png';
+// import heroImage from '/imgs/hero.png';
 
 function App() {
   return (

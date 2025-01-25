@@ -15,7 +15,7 @@ function Contact() {
   const socialLinksElements = socialLinks.map((socialLink) => {
     return (
       <li key={socialLink.id} className="h-fit">
-        <a href={socialLink.link} className="bg-main-placeholder hover:bg-supporter duration-hover rounded-full w-10 aspect-square flex justify-center items-center">
+        <a href={socialLink.link} className="bg-main-placeholder hover:bg-supporter border border-white duration-hover rounded-full w-11 aspect-square flex justify-center items-center">
           <img src={socialLink.img} alt={socialLink.text} className="w-5 aspect-square" />
         </a>
       </li>
@@ -31,7 +31,7 @@ function Contact() {
       <h4 className="text-xl">تواصل معنا</h4>
       <div>
         <form onSubmit={handleSubmit} className="grid grid-cols-[1fr,55px] grid-rows-[55px] gap-4">
-          <input className="bg-main-placeholder placeholder:text-black px-6 rounded-full outline-main outline-1 focus-visible:outline" type="email" name="email" placeholder="أدخل بريدك الإلكتروني" />
+          <input className="bg-main-placeholder placeholder:text-black outline outline-white px-6 rounded-full focus:outline-main outline-1 focus-visible:outline" type="email" name="email" placeholder="أدخل بريدك الإلكتروني" />
           <button className="bg-main-placeholder hover:bg-supporter duration-slow border border-white rounded-full aspect-square flex justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-7" stroke="currentColor" strokeWidth={0.6}>
               <path fillRule="evenodd" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z" clipRule="evenodd" />

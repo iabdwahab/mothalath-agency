@@ -1,4 +1,4 @@
-import person from '/imgs/testimonials/photo-1.svg';
+import person from '/imgs/testimonials/photo-1.jpg';
 import filledStar from '/imgs/testimonials/star-filled.svg';
 import emptyStar from '/imgs/testimonials/star-empty.svg';
 
