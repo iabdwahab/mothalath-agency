@@ -5,8 +5,8 @@ import emptyStar from '/imgs/testimonials/star-empty.svg';
 function TestimonialsCard() {
   return (
     <div className="text-sm grid gap-4 grid-cols-[40px,1fr] p-6 md:p-8 rounded-xl border border-half-white">
-      <div className="rounded-full border border-background overflow-hidden">
-        <img src={person} alt="Person" className="w-full h-full object-cover" />
+      <div className="overflow-hidden">
+        <img src={person} alt="Person" className="w-10 h-10 object-cover rounded-full border border-background" />
       </div>
       <div className="flex flex-col gap-1 text-sm">
         <div className="flex justify-between">
