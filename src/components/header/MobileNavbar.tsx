@@ -1,4 +1,12 @@
-function MobileNavbar() {
-  return <div>MobileNavbar</div>;
+import ContactButton from './ContactButton';
+import { navLinksElements } from './data';
+
+function MobileNavbar({ open }: { open: boolean }) {
+  return (
+    <nav className={`${open ? 'flex' : 'hidden'} md:hidden flex-col  gap-2 absolute left-0 top-[calc(100%+20px)] w-full py-4 px-6 rounded-2xl bg-[#1E1E1E1A] backdrop-blur-[27px]`}>
+      <ul className="flex flex-col items-center w-full gap-2">{navLinksElements}</ul>
+      <ContactButton className="text-center py-[10px]" />
+    </nav>
+  );
 }
 export default MobileNavbar;
