@@ -28,7 +28,7 @@ function Header() {
         <Container className="flex justify-between items-center py-4 px-6 rounded-full border-[0.1px] border-[#ffffff34] bg-[#1E1E1E1A] backdrop-blur-md ">
           <LogoContainer />
           <DesktopNavbar />
-          <ContactButton className="max-md:hidden" />
+          <ContactButton className="max-md:hidden py-2" />
           <ToggleButton open={open} setOpen={setOpen} />
         </Container>
       </header>
