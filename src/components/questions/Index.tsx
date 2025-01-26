@@ -1,6 +1,6 @@
-import Container from '../Container';
-import SectionHeading from '../global/SectionHeading';
-import Question from './Question';
+import Container from "../Container";
+import SectionHeading from "../global/SectionHeading";
+import Question from "./Question";
 
 function Questions() {
   return (

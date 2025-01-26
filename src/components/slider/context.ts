@@ -1,5 +1,5 @@
-import { createContext } from 'react';
-import { slideDataType } from './types';
+import { createContext } from "react";
+import { slideDataType } from "./types";
 
 const defaultValues = {
   slidesLength: 0,
@@ -8,12 +8,12 @@ const defaultValues = {
   slide: {
     id: 0,
     ImageSide: {
-      title: '',
-      description: '',
+      title: "",
+      description: "",
     },
     textSide: {
-      title: '',
-      description: '',
+      title: "",
+      description: "",
     },
   },
 };

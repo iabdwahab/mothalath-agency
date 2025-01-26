@@ -1,12 +1,12 @@
-import Container from '../Container';
-import SectionButtonLink from '../global/SectionButtonLink';
-import SectionHeading from '../global/SectionHeading';
-import Article from './Article';
+import Container from "../Container";
+import SectionButtonLink from "../global/SectionButtonLink";
+import SectionHeading from "../global/SectionHeading";
+import Article from "./Article";
 
 function Articles() {
   return (
     <section className="py-section">
-      <Container className="py-section flex flex-col gap-section">
+      <Container className="flex flex-col gap-section py-section">
         <SectionHeading>مقالاتنا</SectionHeading>
 
         <div className="grid-cards-cols gap-cards">
@@ -18,7 +18,9 @@ function Articles() {
           <Article />
         </div>
 
-        <SectionButtonLink className="light-button block mx-auto">جميع المقالات</SectionButtonLink>
+        <SectionButtonLink className="light-button mx-auto block">
+          جميع المقالات
+        </SectionButtonLink>
       </Container>
     </section>
   );

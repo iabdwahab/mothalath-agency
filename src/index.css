@@ -1,11 +1,11 @@
 /* Open Sans Font from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply font-['Cairo',sans-serif] bg-black overflow-x-hidden;
+  @apply overflow-x-hidden bg-black font-['Cairo',sans-serif];
 }
 
 body.no-scroll {
@@ -17,10 +17,10 @@ h4 {
 }
 
 .light-button {
-  @apply bg-background text-black hover:bg-black hover:text-background border border-background duration-150;
+  @apply border border-background bg-background text-black duration-150 hover:bg-black hover:text-background;
 }
 .dark-button {
-  @apply bg-black text-background hover:bg-background hover:text-black border border-background  duration-150;
+  @apply border border-background bg-black text-background duration-150 hover:bg-background hover:text-black;
 }
 
 .grid-cards-cols {

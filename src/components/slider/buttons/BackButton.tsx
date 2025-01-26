@@ -1,7 +1,7 @@
-import { useContext } from 'react';
-import { IoIosArrowForward } from 'react-icons/io';
-import { SliderContext } from '../context';
-import Button from './Button';
+import { useContext } from "react";
+import { IoIosArrowForward } from "react-icons/io";
+import { SliderContext } from "../context";
+import Button from "./Button";
 
 function BackButton() {
   const { setCurrentSlideIndex, currentSlideIndex } = useContext(SliderContext);

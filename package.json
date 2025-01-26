@@ -4,9 +4,11 @@
   "homepage": "https://iabdwahab.github.io/mothalath-agency",
   "version": "0.0.0",
   "type": "module",
-  "plugins": [
-    "prettier-plugin-tailwindcss"
-  ],
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ]
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

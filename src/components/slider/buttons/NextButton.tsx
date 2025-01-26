@@ -1,10 +1,11 @@
-import { useContext } from 'react';
-import { IoIosArrowBack } from 'react-icons/io';
-import { SliderContext } from '../context';
-import Button from './Button';
+import { useContext } from "react";
+import { IoIosArrowBack } from "react-icons/io";
+import { SliderContext } from "../context";
+import Button from "./Button";
 
 function NextButton() {
-  const { slidesLength, currentSlideIndex, setCurrentSlideIndex } = useContext(SliderContext);
+  const { slidesLength, currentSlideIndex, setCurrentSlideIndex } =
+    useContext(SliderContext);
   const isLastSlide = currentSlideIndex >= slidesLength - 1;
 
   function goNext() {

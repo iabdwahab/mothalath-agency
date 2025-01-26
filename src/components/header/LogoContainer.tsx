@@ -1,4 +1,4 @@
-import logoText from '/logo-text.png';
+import logoText from "/logo-text.png";
 
 function LogoContainer() {
   return (

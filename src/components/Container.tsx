@@ -1,11 +1,13 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 type propsType = {
   children: ReactNode;
   className?: string;
 };
 
-function Container({ children, className = '' }: propsType) {
-  return <div className={`max-w-7xl mx-auto px-3 ${className}`}>{children}</div>;
+function Container({ children, className = "" }: propsType) {
+  return (
+    <div className={`mx-auto max-w-7xl px-3 ${className}`}>{children}</div>
+  );
 }
 export default Container;

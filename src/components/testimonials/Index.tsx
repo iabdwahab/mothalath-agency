@@ -1,7 +1,7 @@
-import Container from '../Container';
-import ContactConsultationButtons from '../global/ContactConsultationButtons';
-import SectionHeading from '../global/SectionHeading';
-import TestimonialsCard from './TestimonialsCard';
+import Container from "../Container";
+import ContactConsultationButtons from "../global/ContactConsultationButtons";
+import SectionHeading from "../global/SectionHeading";
+import TestimonialsCard from "./TestimonialsCard";
 
 function Testimonials() {
   return (

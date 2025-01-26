@@ -1,10 +1,18 @@
-import SectionButtonLink from './SectionButtonLink';
+import SectionButtonLink from "./SectionButtonLink";
 
-function ContactConsultationButtons({ className = '' }: { className?: string }) {
+function ContactConsultationButtons({
+  className = "",
+}: {
+  className?: string;
+}) {
   return (
-    <div className={`grid md:grid-cols-[repeat(2,minmax(0,200px))] gap-4 ${className}`}>
+    <div
+      className={`grid gap-4 md:grid-cols-[repeat(2,minmax(0,200px))] ${className}`}
+    >
       <SectionButtonLink className="light-button">تواصل معنا</SectionButtonLink>
-      <SectionButtonLink className="dark-button">استشارة مجانية</SectionButtonLink>
+      <SectionButtonLink className="dark-button">
+        استشارة مجانية
+      </SectionButtonLink>
     </div>
   );
 }

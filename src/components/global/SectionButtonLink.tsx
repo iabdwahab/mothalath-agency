@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 type propsType = {
   children: ReactNode;
@@ -6,9 +6,16 @@ type propsType = {
   href?: string;
 };
 
-function SectionButtonLink({ children, className = '', href = '#' }: propsType) {
+function SectionButtonLink({
+  children,
+  className = "",
+  href = "#",
+}: propsType) {
   return (
-    <a href={href} className={`block font-black py-4 px-8 rounded-full text-sm text-center ${className}`}>
+    <a
+      href={href}
+      className={`block rounded-full px-8 py-4 text-center text-sm font-black ${className}`}
+    >
       {children}
     </a>
   );
