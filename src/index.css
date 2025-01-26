@@ -5,9 +5,11 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Cairo', sans-serif;
-  background-color: black;
-  overflow-x: hidden;
+  @apply font-['Cairo',sans-serif] bg-black overflow-x-hidden;
+}
+
+body.no-scroll {
+  @apply overflow-hidden;
 }
 
 h4 {
