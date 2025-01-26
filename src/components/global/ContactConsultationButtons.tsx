@@ -1,3 +1,4 @@
+import ConsultationButton from "./ConsultationButton";
 import SectionButtonLink from "./SectionButtonLink";
 
 function ContactConsultationButtons({
@@ -10,9 +11,7 @@ function ContactConsultationButtons({
       className={`grid gap-4 md:grid-cols-[repeat(2,minmax(0,200px))] ${className}`}
     >
       <SectionButtonLink className="light-button">تواصل معنا</SectionButtonLink>
-      <SectionButtonLink className="dark-button">
-        استشارة مجانية
-      </SectionButtonLink>
+      <ConsultationButton className="dark-button" />
     </div>
   );
 }
