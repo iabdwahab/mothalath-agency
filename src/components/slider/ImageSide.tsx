@@ -11,7 +11,7 @@ function ImageSide() {
 
   return (
     <div className="relative mx-auto max-w-[500px">
-      <div className="absolute top-10 max-w-[350px] grid grid-cols-[auto,1fr,auto] items-center gap-4 text-main bg-light-green p-4 rounded-xl">
+      <div className="absolute top-10 max-w-[350px] grid grid-cols-[auto,1fr,auto] items-center gap-4 text-main bg-light-green p-3 md:p-4 rounded-xl">
         <img src={correctIcon} alt="Icon" />
         <div className="grid gap-1">
           <h5 className="font-bold">{data.title}</h5>
@@ -23,7 +23,7 @@ function ImageSide() {
         </div>
       </div>
 
-      <div className="max-w-[450px] mx-auto rounded-[40px] overflow-hidden bg-white">
+      <div className="w-[90%] max-w-[450px] mx-auto rounded-[40px] overflow-hidden bg-white">
         <img src={`/mothalath-agency/imgs/slider/hero/hero-${id}.png`} alt="Photo" className="w-full max-h-[500px] object-cover" />
       </div>
 

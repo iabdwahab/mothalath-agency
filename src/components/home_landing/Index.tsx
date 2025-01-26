@@ -6,7 +6,7 @@ function HomeLanding() {
   return (
     <main>
       <Container className="min-h-screen grid lg:grid-cols-2 items-center">
-        <div className="flex flex-col justify-center gap-6 mt-24 md:mt-20 max-lg:text-center">
+        <div className="flex flex-col justify-center gap-6 md:mt-20 max-lg:text-center">
           <div className="max-lg:mx-auto bg-gradient-to-bl from-[#A7FFBC50] to-[#1E1E1E] p-[1px] lg:pt-[0.43px] lg:pb-[0.6px] lg:px-[0.4px] w-full md:w-fit overflow-hidden rounded-full">
             <div className="flex items-center justify-center gap-4 md:px-12 lg:px-6 py-3 lg:pl-20 rounded-full bg-black">
               <img src={logo} alt="Logo" />

@@ -18,7 +18,7 @@ function Testimonials() {
           <TestimonialsCard />
         </div>
 
-        <ContactConsultationButtons />
+        <ContactConsultationButtons className="md:justify-center" />
       </Container>
     </section>
   );
