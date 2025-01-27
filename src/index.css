@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  @apply overflow-x-hidden bg-black font-['Cairo',sans-serif];
+  @apply overflow-x-hidden bg-[black] font-['Cairo',sans-serif];
 }
 
 body.no-scroll {

@@ -1,9 +1,14 @@
 import Articles from "./components/articles/Index";
+import Container from "./components/Container";
 import Footer from "./components/footer/Index";
+import BlurryCircle from "./components/global/BlurryCircle";
 // import BlurryCircle from './components/global/BlurryCircle';
 import Header from "./components/header/Index";
 import HomeLanding from "./components/home_landing/Index";
 import Questions from "./components/questions/Index";
+import ServiceLanding from "./components/service_landing/Index";
+import ServiceCard from "./components/service_landing/ServiceCard";
+import ServicesContainer from "./components/service_landing/ServicesContainer";
 import SliderSection from "./components/slider/Index";
 import Testimonials from "./components/testimonials/Index";
 
@@ -13,16 +18,19 @@ function App() {
   return (
     <div className="relative overflow-x-hidden bg-contain bg-top text-white">
       <Header />
-      <div
+      {/* <div
         className="bg-no-repeat md:bg-[100%,100%]"
         style={{ backgroundImage: `url("${heroImage}")` }}
       >
         <HomeLanding />
-        <Testimonials />
-      </div>
+      </div> */}
       {/* <BlurryCircle direction="left" />
       <BlurryCircle direction="right" /> */}
-      <SliderSection />
+
+      <ServiceLanding />
+      <BlurryCircle direction="right" />
+      {/* <SliderSection /> */}
+      <Testimonials />
       <Articles />
       <Questions />
       <Footer />

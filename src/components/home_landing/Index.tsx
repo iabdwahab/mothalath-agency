@@ -1,5 +1,6 @@
 import Container from "../Container";
 import ContactConsultationButtons from "../global/ContactConsultationButtons";
+import MainHeading from "../global/MainHeading";
 import logo from "/logo.png";
 
 function HomeLanding() {
@@ -17,9 +18,9 @@ function HomeLanding() {
             </div>
           </div>
 
-          <h1 className="bg-gradient-to-l from-[#999999] to-[#ffffff] bg-clip-text text-3xl font-black !leading-snug text-transparent md:text-4xl lg:text-5xl">
+          <MainHeading>
             أطلق العنان لعلامتك التجارية في عالم الرقمية
-          </h1>
+          </MainHeading>
 
           <p className="bg-gradient-to-l from-[#999999] to-[#ffffff] bg-clip-text text-transparent">
             هل تبحث عن شريك موثوق به لتعزيز حضورك الرقمي؟ نحن نقدم مجموعة شاملة
