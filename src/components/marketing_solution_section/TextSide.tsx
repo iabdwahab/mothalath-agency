@@ -1,0 +1,43 @@
+import greenCircle from "/imgs/marketing_section/green-circle.png";
+
+function TextSide() {
+  return (
+    <div className="grid grid-cols-3 grid-rows-[auto,auto] content-center items-center">
+      <p className="row-start-2">
+        نحن في <span className="text-background">مثلث</span>، متخصصون في التسويق
+        الالكتروني نقدم حلولاً تسويقية مبتكرة تساعد الشركات على تحقيق نمو مستدام
+        في عالم التجارة الإلكترونية. من خلال افضل الاستراتيجيات، نضمن لك زيادة
+        وصول علامتك التجارية إلى الجمهور المستهدف وتحويل{" "}
+        <span className="text-background">الزوار</span>
+        إلى <span className="text-background">عملاء</span>.
+      </p>
+      <div className="relative col-start-2 row-span-2 flex items-center justify-center">
+        <span className="absolute -z-20 h-full w-3/4 bg-[#ffffff2d] blur-3xl"></span>
+        <h2 className="flex flex-col text-center text-5xl font-black leading-normal">
+          <span>لنسلط</span>
+          <span className="relative flex justify-center">
+            <img
+              src={greenCircle}
+              alt="Circle"
+              className="absolute -top-1 -z-10 w-[230px] -rotate-6"
+            />
+            <img
+              src={greenCircle}
+              alt="Circle"
+              className="absolute -top-1 -z-10 w-[230px]"
+            />
+            الـــضــوء
+          </span>
+          <span>على ما يميز</span>
+          <span>شركــتــــــك</span>
+        </h2>
+      </div>
+      <p className="col-start-3">
+        <span className="text-background">حل مشاكل العملاء</span>: تحديد المشاكل
+        التي تواجهها الشركات في مجال التسويق الإلكتروني وكيف يمكن لخدماتك حل هذه
+        المشاكل.
+      </p>
+    </div>
+  );
+}
+export default TextSide;

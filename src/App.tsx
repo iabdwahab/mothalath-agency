@@ -14,11 +14,13 @@ import Testimonials from "./components/testimonials/Index";
 
 import heroImage from "/imgs/hero.png";
 import HomeFeatures from "./components/home_features/Index";
+import MarketingSolutions from "./components/marketing_solution_section/Index";
 
 function App() {
   return (
     <div className="relative overflow-x-hidden bg-contain bg-top text-white">
       <Header />
+      <MarketingSolutions />
       <div
         className="bg-no-repeat md:bg-[100%,100%]"
         style={{ backgroundImage: `url("${heroImage}")` }}
