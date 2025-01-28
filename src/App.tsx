@@ -20,7 +20,6 @@ function App() {
   return (
     <div className="relative overflow-x-hidden bg-contain bg-top text-white">
       <Header />
-      <MarketingSolutions />
       <div
         className="bg-no-repeat md:bg-[100%,100%]"
         style={{ backgroundImage: `url("${heroImage}")` }}
@@ -28,6 +27,7 @@ function App() {
         <HomeLanding />
         <HomeFeatures />
       </div>
+      <MarketingSolutions />
       <Testimonials />
       {/* <BlurryCircle direction="left" />
       <BlurryCircle direction="right" /> */}
