@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { SliderContext } from "./context";
 import BackButton from "./buttons/BackButton";
 import NextButton from "./buttons/NextButton";
+import ConsultationButton from "../global/ConsultationButton";
 
 function TextSide() {
   const { slide } = useContext(SliderContext);
@@ -16,9 +17,7 @@ function TextSide() {
         <SectionButtonLink className="light-button">
           احجز خدمتك الآن
         </SectionButtonLink>
-        <SectionButtonLink className="dark-button">
-          استشارة مجانية
-        </SectionButtonLink>
+        <ConsultationButton />
       </div>
       <div className="flex gap-3 max-lg:justify-center">
         <BackButton />
