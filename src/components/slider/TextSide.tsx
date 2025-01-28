@@ -13,7 +13,7 @@ function TextSide() {
     <div className="flex flex-col justify-center gap-8 max-lg:text-center">
       <h4 className="text-3xl">{data.title}</h4>
       <p className="text-xl font-light">{data.description}</p>
-      <div className="flex flex-col gap-16 lg:flex-col-reverse">
+      <div className="flex flex-col gap-16 lg:flex-col-reverse lg:gap-8">
         <div className="flex gap-3 max-lg:justify-center">
           <BackButton />
           <NextButton />
