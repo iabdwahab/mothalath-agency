@@ -17,7 +17,7 @@ function SliderSection() {
         slide: sliderData[currentSlideIndex],
       }}
     >
-      <section className="bg-[center,top] bg-lines bg-contain bg-no-repeat py-28 max-lg:bg-no-repeat">
+      <section className="bg-lines bg-contain bg-no-repeat py-28 max-lg:bg-no-repeat lg:bg-center">
         <Container className="grid gap-12 lg:grid-cols-2">
           <TextSide />
           <div className="w-full max-lg:-order-1">
