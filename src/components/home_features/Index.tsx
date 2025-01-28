@@ -7,10 +7,15 @@ function HomeFeatures() {
   return (
     <section className="py-32">
       <Container className="flex flex-col gap-8">
-        <div className="flex flex-col gap-4 text-center lg:max-w-[55%]">
+        <div className="flex flex-col gap-4 max-lg:text-center lg:max-w-[55%]">
           <h2 className="gradient-text text-4xl font-black leading-snug">
-            نحن لا نقوم فقط بالتسويق، بل نبني علامتك التجارية ونحقق النمو
-            المستدام
+            <span className="bg-gradient-to-l from-supporter to-background bg-clip-text text-supporter text-transparent">
+              نحن لا نقوم
+            </span>{" "}
+            فقط بالتسويق، بل نبني علامتك التجارية ونحقق{" "}
+            <span className="bg-gradient-to-l from-supporter to-background bg-clip-text text-supporter text-transparent">
+              النمو المستدام
+            </span>
           </h2>
           <p className="gradient-text">
             هل تبحث عن شريك موثوق به لتعزيز حضورك الرقمي؟ نحن نقدم مجموعة شاملة
