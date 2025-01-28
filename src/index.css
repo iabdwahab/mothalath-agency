@@ -26,3 +26,7 @@ h4 {
 .grid-cards-cols {
   @apply grid md:grid-cols-2 lg:grid-cols-3;
 }
+
+.gradient-text {
+  @apply bg-gradient-to-l from-[#999999] to-[#ffffff] bg-clip-text text-transparent;
+}
