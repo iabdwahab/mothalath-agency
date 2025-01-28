@@ -21,8 +21,8 @@ function HomeFeatures() {
         </div>
 
         <div className="relative grid gap-6 pt-7 md:grid-cols-2 lg:grid-cols-3">
-          <RegularCard />
-          <RegularCard />
+          <RegularCard positionX="right" positionY="top" />
+          <RegularCard positionX="left" positionY="bottom" />
           <div className="relative md:col-span-2 lg:-top-7 lg:col-span-1">
             <SpecialCard />
           </div>
