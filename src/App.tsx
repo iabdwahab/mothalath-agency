@@ -1,18 +1,19 @@
+import { useEffect } from "react";
 import Articles from "./components/articles/Index";
-import Container from "./components/Container";
+// import Container from "./components/Container";
 import Footer from "./components/footer/Index";
 import BlurryCircle from "./components/global/BlurryCircle";
 // import BlurryCircle from './components/global/BlurryCircle';
 import Header from "./components/header/Index";
-import HomeLanding from "./components/home_landing/Index";
+// import HomeLanding from "./components/home_landing/Index";
 import Questions from "./components/questions/Index";
 import ServiceLanding from "./components/service_landing/Index";
-import ServiceCard from "./components/service_landing/ServiceCard";
-import ServicesContainer from "./components/service_landing/ServicesContainer";
+// import ServiceCard from "./components/service_landing/ServiceCard";
+// import ServicesContainer from "./components/service_landing/ServicesContainer";
 import SliderSection from "./components/slider/Index";
 import Testimonials from "./components/testimonials/Index";
 
-import heroImage from "/imgs/hero.png";
+// import heroImage from "/imgs/hero.png";
 
 function App() {
   return (
@@ -29,7 +30,11 @@ function App() {
 
       <ServiceLanding />
       <BlurryCircle direction="right" />
-      {/* <SliderSection /> */}
+
+      <div className="relative">
+        <BlurryCircle direction="right" />
+        <SliderSection />
+      </div>
       <Testimonials />
       <Articles />
       <Questions />

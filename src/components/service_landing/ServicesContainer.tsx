@@ -1,3 +1,4 @@
+import PlaceServiceCard from "./PlaceServiceCard";
 import ServiceCard from "./ServiceCard";
 
 function ServicesContainer() {
@@ -5,11 +6,13 @@ function ServicesContainer() {
     <div>
       <h4 className="mb-5 text-background">لماذا تختارنا؟</h4>
 
-      <div className="grid-cards-cols gap-4">
+      <div className="grid-cards-cols gap-6">
         <ServiceCard />
         <ServiceCard />
         <ServiceCard />
         <ServiceCard />
+        <ServiceCard />
+        <PlaceServiceCard />
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import ServicesContainer from "./ServicesContainer";
 function ServiceLanding() {
   return (
     <main
-      className="relative z-0 bg-contain bg-top bg-no-repeat"
+      className="relative z-0 bg-contain bg-top bg-no-repeat pb-12"
       style={{
         backgroundImage: `url('/mothalath-agency/imgs/services/web-dev.jpg')`,
       }}
@@ -13,7 +13,7 @@ function ServiceLanding() {
       {/* Overlay */}
       <div className="absolute -z-10 h-full w-full bg-[#000000BD]"></div>
       <Container className="flex flex-col justify-center gap-11">
-        <div className="grid items-center pt-[35vh] max-md:text-center md:grid-cols-2">
+        <div className="grid items-center pt-[30vh] max-md:text-center md:grid-cols-2 md:pt-[35vh]">
           <div className="text-l flex flex-col gap-4 font-bold">
             <MainHeading>صمم موقعك الإلكتروني واحترف عالم الإنترنت</MainHeading>
             <p className="bg-gradient-to-l from-[#999999] to-[#ffffff] bg-clip-text text-transparent">
