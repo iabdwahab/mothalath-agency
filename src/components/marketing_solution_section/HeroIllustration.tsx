@@ -3,7 +3,7 @@ import ContactLink from "./ContactLink";
 
 function HeroIllustration() {
   return (
-    <div className="relative z-0 grid overflow-hidden rounded-lg bg-[#0D0D0D] pr-10 pt-10 max-lg:pr-[30px] lg:grid-cols-[1fr,58%] lg:pt-20">
+    <div className="relative z-0 grid h-full overflow-hidden rounded-lg bg-[#0D0D0D] pr-10 pt-10 max-lg:pr-[30px] lg:grid-cols-[1fr,58%] lg:pt-20">
       <div className="absolute left-0 top-0 -z-10 aspect-square w-[334px] -translate-x-3/4 translate-y-3/4 bg-[#A7FFBC] blur-[417.8px]"></div>
       <div className="absolute right-0 top-0 -z-10 aspect-square w-[334px] -translate-y-3/4 translate-x-3/4 bg-[#A7FFBC] blur-[417.8px]"></div>
       <div className="flex flex-col gap-8 max-lg:items-center max-lg:pl-[30px] max-lg:text-center lg:pb-20">
