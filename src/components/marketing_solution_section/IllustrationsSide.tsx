@@ -1,13 +1,14 @@
 import ConsultationIllustration from "./ConsultationIllustration";
+import ConsultationLink from "./ConsultationLink";
 import HeroIllustration from "./HeroIllustration";
 
 function IllustrationsSide() {
   return (
     <div className="relative grid gap-4 lg:grid-cols-[350px,1fr]">
-      <div className="to absolute z-40 flex h-full w-full items-center justify-center rounded-lg bg-[#ffffff21] p-0 text-3xl font-black text-black backdrop-blur-sm">
-        <span className="rounded-md bg-white p-2">يتم العمل عليها.</span>
+      <div className="flex flex-col gap-4 max-lg:order-1">
+        <ConsultationIllustration />
+        <ConsultationLink />
       </div>
-      <ConsultationIllustration />
       <HeroIllustration />
     </div>
   );

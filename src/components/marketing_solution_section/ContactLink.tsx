@@ -1,10 +1,14 @@
 import { GoArrowLeft } from "react-icons/go";
 
-function ContactLink() {
+type propsType = {
+  bgColorClassName?: string;
+};
+
+function ContactLink({ bgColorClassName = "bg-white" }: propsType) {
   return (
     <a
       href="#"
-      className="group flex w-fit items-center gap-2 rounded-full bg-white px-4 py-2 duration-medium hover:bg-main"
+      className={`group flex w-fit items-center gap-2 rounded-full ${bgColorClassName} px-4 py-2 duration-medium hover:bg-main`}
     >
       <span className="font-semibold text-main group-hover:text-white">
         تواصل الآن
