@@ -12,6 +12,29 @@ body.no-scroll {
   @apply overflow-hidden;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #244441;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(177, 177, 177);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8a8a8a;
+}
+
 h4 {
   @apply text-xl font-bold;
 }

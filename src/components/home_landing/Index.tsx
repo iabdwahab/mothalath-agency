@@ -1,7 +1,7 @@
 import Container from "../Container";
 import ContactConsultationButtons from "../global/ContactConsultationButtons";
 import MainHeading from "../global/MainHeading";
-import logo from "/logo.png";
+import logo from "/logo-right.png";
 
 function HomeLanding() {
   return (
