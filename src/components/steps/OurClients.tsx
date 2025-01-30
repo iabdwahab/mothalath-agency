@@ -15,8 +15,6 @@ function OurClients() {
     );
   });
 
-  console.log(clientsLogosElements);
-
   return (
     <section className="">
       <Container className="grid grid-cols-4 flex-wrap items-center justify-center gap-8 lg:flex">
