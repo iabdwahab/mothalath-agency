@@ -9,8 +9,8 @@ function OurClients() {
 
   const clientsLogosElements = clientsLogosList.map((logo, index) => {
     return (
-      <div>
-        <img key={index} src={logo} alt="Image" />
+      <div key={index}>
+        <img src={logo} alt="Image" className="h-10 w-24 object-contain" />
       </div>
     );
   });
@@ -18,8 +18,8 @@ function OurClients() {
   console.log(clientsLogosElements);
 
   return (
-    <section className="py-section">
-      <Container className="flex flex-wrap items-center justify-center gap-8">
+    <section className="">
+      <Container className="grid grid-cols-4 flex-wrap items-center justify-center gap-8 lg:flex">
         {clientsLogosElements}
       </Container>
     </section>

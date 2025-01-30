@@ -5,7 +5,7 @@ import SpecialCard from "./SpecialCard";
 
 function HomeFeatures() {
   return (
-    <section className="py-32">
+    <section className="py-section">
       <Container className="flex flex-col gap-8">
         <div className="flex flex-col gap-4 max-lg:text-center lg:max-w-[55%]">
           <h2 className="gradient-text text-4xl font-black leading-snug">

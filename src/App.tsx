@@ -6,16 +6,17 @@ import BlurryCircle from "./components/global/BlurryCircle";
 import Header from "./components/header/Index";
 import HomeLanding from "./components/home_landing/Index";
 import Questions from "./components/questions/Index";
-import ServiceLanding from "./components/service_landing/Index";
+// import ServiceLanding from "./components/service_landing/Index";
 // import ServiceCard from "./components/service_landing/ServiceCard";
 // import ServicesContainer from "./components/service_landing/ServicesContainer";
 import SliderSection from "./components/slider/Index";
-import Testimonials from "./components/testimonials/Index";
+// import Testimonials from "./components/testimonials/Index";
 
 import heroImage from "/imgs/hero.png";
 import HomeFeatures from "./components/home_features/Index";
-import MarketingSolutions from "./components/marketing_solution_section/Index";
-import OurClients from "./components/our_clients/OurClients";
+// import MarketingSolutions from "./components/marketing_solution_section/Index";
+import OurClients from "./components/steps/OurClients";
+import StepsSection from "./components/steps/Index";
 
 function App() {
   return (
@@ -25,12 +26,12 @@ function App() {
         className="bg-no-repeat md:bg-[100%,100%]"
         style={{ backgroundImage: `url("${heroImage}")` }}
       >
-        <ServiceLanding />
-        {/* <HomeLanding />
-        <HomeFeatures /> */}
+        {/* <ServiceLanding /> */}
+        <HomeLanding />
+        <HomeFeatures />
       </div>
       {/* <MarketingSolutions /> */}
-      <OurClients />
+      <StepsSection />
       {/* <Testimonials /> */}
       {/* <BlurryCircle direction="left" />
       <BlurryCircle direction="right" /> */}
