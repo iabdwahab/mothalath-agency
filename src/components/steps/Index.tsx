@@ -5,7 +5,7 @@ import StepsContainer from "./StepsContainer";
 
 function StepsSection() {
   return (
-    <section className="py-section">
+    <section className="pb-28 pt-section">
       <Container className="grid gap-8">
         <StepsContainer />
         <OurClients />
