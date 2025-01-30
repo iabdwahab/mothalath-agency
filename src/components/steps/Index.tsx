@@ -8,7 +8,9 @@ function StepsSection() {
     <section className="pb-28 pt-section">
       <Container className="grid gap-8">
         <StepsContainer />
-        <OurClients />
+        <div className="py-6">
+          <OurClients />
+        </div>
         <ContactConsultationButtons className="md:mx-auto" />
       </Container>
     </section>

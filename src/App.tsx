@@ -8,6 +8,7 @@ import SliderSection from "./components/slider/Index";
 import heroImage from "/imgs/hero.png";
 import HomeFeatures from "./components/home_features/Index";
 import StepsSection from "./components/steps/Index";
+import Testimonials from "./components/testimonials/Index";
 
 function App() {
   return (
@@ -23,7 +24,12 @@ function App() {
       </div>
 
       <StepsSection />
-      <SliderSection />
+      <div className="relative">
+        <span className="absolute left-0 top-1/2 -z-10 h-[334px] max-h-[50vh] w-[334px] max-w-[50vw] -translate-y-1/2 bg-background blur-[334px]"></span>
+        <span className="absolute right-0 top-1/2 -z-10 h-[334px] max-h-[50vh] w-[334px] max-w-[50vw] -translate-y-1/2 bg-background blur-[334px]"></span>
+        <SliderSection />
+      </div>
+      <Testimonials />
       <Articles />
       <Questions />
       <Footer />

@@ -9,7 +9,7 @@ function OurClients() {
 
   const clientsLogosElements = clientsLogosList.map((logo, index) => {
     return (
-      <div key={index}>
+      <div key={index} className="flex items-center justify-center">
         <img src={logo} alt="Image" className="h-10 w-24 object-contain" />
       </div>
     );

@@ -2,7 +2,7 @@ import waves from "/imgs/steps/waves.png";
 
 function StepsContainer() {
   return (
-    <div className="grid gap-4 lg:grid-cols-[1fr,350px]">
+    <div className="grid items-center gap-4 lg:grid-cols-[1fr,auto]">
       <div className="relative overflow-hidden">
         <img src={waves} alt="Waves" />
         <span className="absolute -left-40 top-0 block h-full w-52 bg-[#000000b9] blur-[40px]"></span>
