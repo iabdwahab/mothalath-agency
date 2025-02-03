@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 type propsType = {
   children: ReactNode;
@@ -12,12 +13,12 @@ function SectionButtonLink({
   href = "#",
 }: propsType) {
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       className={`block rounded-full px-8 py-4 text-center text-sm font-black ${className}`}
     >
       {children}
-    </a>
+    </Link>
   );
 }
 export default SectionButtonLink;

@@ -3,6 +3,7 @@ export type slideDataType = {
   textSide: {
     title: string;
     description: string;
+    servicePageLink: string;
   };
   ImageSide: {
     title: string;

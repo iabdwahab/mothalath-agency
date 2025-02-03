@@ -19,7 +19,10 @@ function TextSide() {
           <NextButton />
         </div>
         <div className="flex gap-3 max-lg:justify-center max-md:flex-col">
-          <SectionButtonLink className="light-button">
+          <SectionButtonLink
+            href={`/services/${data.servicePageLink}`}
+            className="light-button"
+          >
             احجز خدمتك الآن
           </SectionButtonLink>
           <ConsultationButton />
