@@ -14,6 +14,7 @@ const defaultValues = {
     textSide: {
       title: "",
       description: "",
+      servicePageLink: "",
     },
   },
 };
