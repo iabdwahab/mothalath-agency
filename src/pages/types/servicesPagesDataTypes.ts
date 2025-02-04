@@ -8,6 +8,10 @@ export const servicesPageDefaultData = {
     en: "",
     ar: "",
   },
+  features_title: {
+    en: "",
+    ar: "",
+  },
   features: {
     feature: {
       feature_title: {
@@ -29,6 +33,10 @@ export type servicePageDataType = {
     ar: string;
   };
   landing_description: {
+    en: string;
+    ar: string;
+  };
+  features_title: {
     en: string;
     ar: string;
   };

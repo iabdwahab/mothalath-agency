@@ -24,7 +24,7 @@ function ServicePage() {
       .then((data) => {
         if (data.length) {
           const { acf } = data[0];
-          console.log(acf);
+
           setPageData(acf);
         } else {
           setIsError(true);

@@ -2,9 +2,11 @@ import { useContext } from "react";
 import PlaceServiceCard from "./PlaceServiceCard";
 import ServiceCard from "./ServiceCard";
 import { ServicePageContext } from "../../context/pages/ServicePageContext";
+import { WebsiteLangContext } from "../../App";
 
 function ServicesContainer() {
-  const { features } = useContext(ServicePageContext);
+  const { websiteLang } = useContext(WebsiteLangContext);
+  const { features, features_title } = useContext(ServicePageContext);
 
   //Run this to know why I did this.
   console.log(features);
@@ -12,15 +14,15 @@ function ServicesContainer() {
 
   return (
     <div>
-      <h4 className="mb-5 text-background">لماذا تختارنا؟</h4>
+      <h4 className="mb-5 text-background">{features_title[websiteLang]}</h4>
 
       <div className="grid-cards-cols gap-6">
         {featuresList.map((feature, index) => {
           return (
             <ServiceCard
               key={index}
-              title={feature.feature_title.ar}
-              description={feature.feature_description.ar}
+              title={feature.feature_title[websiteLang]}
+              description={feature.feature_description[websiteLang]}
             />
           );
         })}
