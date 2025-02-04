@@ -6,11 +6,13 @@ import {
   servicePageDataType,
   servicesPageDefaultData,
 } from "./types/servicesPagesDataTypes";
+import ErrorPage from "./ErrorPage";
 
 function ServicePage() {
   const [pageData, setPageData] = useState<servicePageDataType>(
     servicesPageDefaultData,
   );
+  const [isError, setIsError] = useState(false);
 
   const { service_slug } = useParams<{ service_slug: string }>();
 
@@ -20,15 +22,19 @@ function ServicePage() {
     )
       .then((res) => res.json())
       .then((data) => {
-        const { acf } = data[0];
-
-        setPageData(acf);
+        if (data.length) {
+          const { acf } = data[0];
+          console.log(acf);
+          setPageData(acf);
+        } else {
+          setIsError(true);
+        }
       });
   }, []);
 
   return (
     <ServicePageContext.Provider value={pageData}>
-      <ServiceLanding />
+      {!isError ? <ServiceLanding /> : <ErrorPage />}
     </ServicePageContext.Provider>
   );
 }

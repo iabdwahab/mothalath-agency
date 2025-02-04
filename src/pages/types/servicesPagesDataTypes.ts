@@ -1,21 +1,47 @@
 export const servicesPageDefaultData = {
-  heading: {
+  landing_background_image: "",
+  landing_heading: {
     en: "",
     ar: "",
   },
-  description: {
+  landing_description: {
     en: "",
     ar: "",
+  },
+  features: {
+    feature: {
+      feature_title: {
+        en: "",
+        ar: "",
+      },
+      feature_description: {
+        en: "",
+        ar: "",
+      },
+    },
   },
 };
 
 export type servicePageDataType = {
-  heading: {
+  landing_background_image: string;
+  landing_heading: {
     en: string;
     ar: string;
   };
-  description: {
+  landing_description: {
     en: string;
     ar: string;
+  };
+  features: {
+    [key: string]: {
+      feature_title: {
+        en: string;
+        ar: string;
+      };
+      feature_description: {
+        en: string;
+        ar: string;
+      };
+    };
   };
 };
