@@ -1,27 +1,17 @@
-import { useParams } from "react-router-dom";
 import Container from "../Container";
 import MainHeading from "../global/MainHeading";
 import ServicesContainer from "./ServicesContainer";
-import { servicesData } from "./data";
 import { useContext } from "react";
 import { ServicePageContext } from "../../context/pages/ServicePageContext";
 
 function ServiceLanding() {
-  const { service_slug } = useParams<{ service_slug: string }>();
   const { heading, description } = useContext(ServicePageContext);
-
-  let serviceBGImage;
-
-  if (service_slug) {
-    const { bgImage } = servicesData[service_slug];
-    serviceBGImage = bgImage;
-  }
 
   return (
     <main
       className="relative z-0 bg-contain bg-top bg-no-repeat pb-12"
       style={{
-        backgroundImage: `url('${serviceBGImage}')`,
+        backgroundImage: `url('')`,
       }}
     >
       {/* Overlay */}
