@@ -3,16 +3,17 @@ import Container from "../Container";
 import MainHeading from "../global/MainHeading";
 import ServicesContainer from "./ServicesContainer";
 import { servicesData } from "./data";
+import { useContext } from "react";
+import { ServicePageContext } from "../../context/pages/ServicePageContext";
 
 function ServiceLanding() {
-  const { service } = useParams<{ service: string }>();
+  const { service_slug } = useParams<{ service_slug: string }>();
+  const { heading, description } = useContext(ServicePageContext);
 
-  let serviceHeading, serviceDescription, serviceBGImage;
+  let serviceBGImage;
 
-  if (service) {
-    const { heading, description, bgImage } = servicesData[service];
-    serviceHeading = heading;
-    serviceDescription = description;
+  if (service_slug) {
+    const { bgImage } = servicesData[service_slug];
     serviceBGImage = bgImage;
   }
 
@@ -28,9 +29,9 @@ function ServiceLanding() {
       <Container className="flex flex-col justify-center gap-11">
         <div className="grid items-center pt-[30vh] max-md:text-center md:grid-cols-2 md:pt-[35vh]">
           <div className="text-l flex flex-col gap-4 font-bold">
-            <MainHeading>{serviceHeading}</MainHeading>
+            <MainHeading>{heading.ar}</MainHeading>
             <p className="bg-gradient-to-l from-[#999999] to-[#ffffff] bg-clip-text text-transparent">
-              {serviceDescription}
+              {description.ar}
             </p>
           </div>
         </div>

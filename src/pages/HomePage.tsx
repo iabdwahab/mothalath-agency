@@ -6,7 +6,7 @@ import StepsSection from "../components/steps/Index";
 
 import heroImage from "/imgs/hero.png";
 
-function Home() {
+function HomePage() {
   return (
     <>
       <div
@@ -26,4 +26,4 @@ function Home() {
     </>
   );
 }
-export default Home;
+export default HomePage;
