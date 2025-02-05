@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import trinagleIcon from "/icons/triangle-icon.png";
 import { WebsiteLangContext } from "../../App";
-import { FeatureItem } from "../../types/homepageTypes";
+import { FeatureItemType } from "../../types/homepageTypes";
 
 type propsType = {
-  data: FeatureItem;
+  data: FeatureItemType;
 };
 
 function SpecialCard({ data }: propsType) {

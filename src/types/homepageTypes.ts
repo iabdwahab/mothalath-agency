@@ -1,49 +1,49 @@
-import { MultiLangText } from "./global";
+import { MultiLangTextType } from "./global";
 
-export interface Landing {
-  slogan: MultiLangText;
-  heading: MultiLangText;
-  description: MultiLangText;
+export interface LandingType {
+  slogan: MultiLangTextType;
+  heading: MultiLangTextType;
+  description: MultiLangTextType;
 }
 
-export interface MarketingSolutionsTextSide {
-  first_text: MultiLangText;
-  middle_text: MultiLangText;
-  last_text: MultiLangText;
+export interface MarketingSolutionsTextSideType {
+  first_text: MultiLangTextType;
+  middle_text: MultiLangTextType;
+  last_text: MultiLangTextType;
 }
 
-export interface MarketingSolutionsIllustrationsSide {
-  consultation_text: MultiLangText;
+export interface MarketingSolutionsIllustrationsSideType {
+  consultation_text: MultiLangTextType;
   consultation_image: boolean;
   hero_image: boolean;
-  hero_title: MultiLangText;
-  hero_description: MultiLangText;
+  hero_title: MultiLangTextType;
+  hero_description: MultiLangTextType;
 }
 
-export interface MarketingSolutions {
-  text_side: MarketingSolutionsTextSide;
-  illustrations_side: MarketingSolutionsIllustrationsSide;
+export interface MarketingSolutionsType {
+  text_side: MarketingSolutionsTextSideType;
+  illustrations_side: MarketingSolutionsIllustrationsSideType;
 }
 
-export interface FeatureItem {
-  feature_title: MultiLangText;
-  feature_description: MultiLangText;
+export interface FeatureItemType {
+  feature_title: MultiLangTextType;
+  feature_description: MultiLangTextType;
 }
 
-export interface Features {
+export interface FeaturesType {
   features_content: {
-    heading: MultiLangText;
-    description: MultiLangText;
+    heading: MultiLangTextType;
+    description: MultiLangTextType;
   };
   features_list: {
-    feature_1: FeatureItem;
-    feature_2: FeatureItem;
+    feature_1: FeatureItemType;
+    feature_2: FeatureItemType;
   };
-  special_feature: FeatureItem;
+  special_feature: FeatureItemType;
 }
 
 export interface homePageContentType {
-  landing: Landing;
-  marketing_solutions: MarketingSolutions;
-  features: Features;
+  landing: LandingType;
+  marketing_solutions: MarketingSolutionsType;
+  features: FeaturesType;
 }

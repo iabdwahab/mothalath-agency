@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import { MultiLangText } from "../../types/global";
+import { MultiLangTextType } from "../../types/global";
 import { WebsiteLangContext } from "../../App";
 
 type propsType = {
   data: {
-    heading: MultiLangText;
-    description: MultiLangText;
+    heading: MultiLangTextType;
+    description: MultiLangTextType;
   };
 };
 

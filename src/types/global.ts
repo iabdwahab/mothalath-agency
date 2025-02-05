@@ -1,4 +1,4 @@
-export interface MultiLangText {
+export interface MultiLangTextType {
   en: string;
   ar: string;
 }

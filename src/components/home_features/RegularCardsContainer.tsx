@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import RegularCard from "./RegularCard";
 import { WebsiteLangContext } from "../../App";
-import { FeatureItem } from "../../types/homepageTypes";
+import { FeatureItemType } from "../../types/homepageTypes";
 
 type propsType = {
   features_list: {
-    feature_1: FeatureItem;
-    feature_2: FeatureItem;
+    feature_1: FeatureItemType;
+    feature_2: FeatureItemType;
   };
 };
 
