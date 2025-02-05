@@ -13,7 +13,7 @@ function HeroIllustration() {
   } = useContext(HomePageDataContext);
 
   return (
-    <div className="relative z-0 grid h-full overflow-hidden rounded-lg bg-[#0D0D0D] pr-10 pt-10 max-lg:pr-[30px] lg:grid-cols-[1fr,58%] lg:pt-20">
+    <div className="relative z-0 grid h-full overflow-hidden rounded-lg bg-[#0D0D0D] pt-10 max-lg:pr-[30px] lg:grid-cols-[1fr_58%] lg:pt-20 ltr:pl-10 rtl:pr-10">
       {/* Blurry Dots: */}
       <div className="absolute left-0 top-0 -z-10 aspect-square w-[334px] -translate-x-3/4 translate-y-3/4 bg-[#A7FFBC] blur-[417.8px]"></div>
       <div className="absolute right-0 top-0 -z-10 aspect-square w-[334px] -translate-y-3/4 translate-x-3/4 bg-[#A7FFBC] blur-[417.8px]"></div>
@@ -25,11 +25,11 @@ function HeroIllustration() {
         <ContactLink bgColorClassName="bg-background" />
       </div>
 
-      <div className="bottom-0 left-0 mt-auto lg:absolute lg:w-[72%]">
+      <div className="bottom-0 mt-auto lg:absolute lg:w-[72%] ltr:right-0 rtl:left-0">
         <img
           src={hero_image || illustration}
           alt="Illustration"
-          className="w-full"
+          className="w-full ltr:lg:scale-x-[-1]"
         />
       </div>
     </div>

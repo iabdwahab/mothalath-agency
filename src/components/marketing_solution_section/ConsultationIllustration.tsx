@@ -13,7 +13,7 @@ function ConsultationIllustration() {
   } = useContext(HomePageDataContext);
 
   return (
-    <div className="flex min-h-96 grow flex-col items-center gap-4 overflow-hidden rounded-lg bg-background pb-0 pr-6 pt-6 max-lg:px-6 max-lg:text-center lg:items-start">
+    <div className="flex min-h-96 grow flex-col items-center gap-4 overflow-hidden rounded-lg bg-background px-6 pb-0 pt-6 max-lg:px-6 max-lg:text-center lg:items-start">
       <h3 className="text-2xl font-black text-main">
         {consultation_text[websiteLang]}
       </h3>
