@@ -3,12 +3,12 @@ import Container from "../Container";
 import ContactConsultationButtons from "../global/ContactConsultationButtons";
 import MainHeading from "../global/MainHeading";
 import logo from "/logo-right.png";
-import { HomePageContext } from "../../pages/HomePage";
+import { HomePageDataContext } from "../../pages/HomePage";
 import { WebsiteLangContext } from "../../App";
 
 function HomeLanding() {
   const { websiteLang } = useContext(WebsiteLangContext);
-  const { landing } = useContext(HomePageContext);
+  const { landing } = useContext(HomePageDataContext);
   const { slogan, heading, description } = landing;
 
   return (

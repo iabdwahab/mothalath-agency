@@ -9,7 +9,7 @@ import heroImage from "/imgs/hero.png";
 import { homePageContentType } from "../types/homepageTypes";
 import { defaultHomePageContent } from "../types/homepageTypesDefaultValues";
 
-export const HomePageContext = createContext<homePageContentType>(
+export const HomePageDataContext = createContext<homePageContentType>(
   defaultHomePageContent,
 );
 
@@ -27,7 +27,7 @@ function HomePage() {
       .then((data) => {
         if (data.length) {
           const { acf } = data[0];
-
+          console.log(acf);
           setPageData(acf);
         } else {
           setIsError(true);
@@ -36,7 +36,7 @@ function HomePage() {
   }, []);
 
   return (
-    <HomePageContext.Provider value={pageData}>
+    <HomePageDataContext.Provider value={pageData}>
       <div
         className="bg-no-repeat md:bg-[100%,100%]"
         style={{ backgroundImage: `url("${heroImage}")` }}
@@ -51,7 +51,7 @@ function HomePage() {
         <span className="absolute right-0 top-1/2 -z-10 h-[334px] max-h-[50vh] w-[334px] max-w-[35vw] -translate-y-1/2 bg-background blur-[334px]"></span>
         <SliderSection />
       </div>
-    </HomePageContext.Provider>
+    </HomePageDataContext.Provider>
   );
 }
 export default HomePage;

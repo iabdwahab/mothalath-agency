@@ -1,12 +1,20 @@
+import { useContext } from "react";
 import trinagleIcon from "/icons/triangle-icon.png";
+import { WebsiteLangContext } from "../../App";
+import { FeatureItem } from "../../types/homepageTypes";
 
-function SpecialCard() {
+type propsType = {
+  data: FeatureItem;
+};
+
+function SpecialCard({ data }: propsType) {
+  const { websiteLang } = useContext(WebsiteLangContext);
+  const { feature_title, feature_description } = data;
+
   return (
     <div className="flex min-h-[210px] flex-col gap-4 rounded-lg bg-background p-8 pl-12 text-xl backdrop-blur-2xl">
-      <h3 className="font-black text-main">زيادة المبيعات</h3>
-      <p className="text-black">
-        نوفر لك الاستراتيجيات اللازمة لزيادة مبيعاتك وتحقيق عائد استثمار مرتفع.
-      </p>
+      <h3 className="font-black text-main">{feature_title[websiteLang]}</h3>
+      <p className="text-black">{feature_description[websiteLang]}</p>
       <img
         src={trinagleIcon}
         alt="Icon"
