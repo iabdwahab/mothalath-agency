@@ -14,8 +14,8 @@ export interface MarketingSolutionsTextSideType {
 
 export interface MarketingSolutionsIllustrationsSideType {
   consultation_text: MultiLangTextType;
-  consultation_image: boolean;
-  hero_image: boolean;
+  consultation_image: string;
+  hero_image: string;
   hero_title: MultiLangTextType;
   hero_description: MultiLangTextType;
 }
