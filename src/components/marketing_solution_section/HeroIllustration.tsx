@@ -19,7 +19,7 @@ function HeroIllustration() {
       <div className="absolute right-0 top-0 -z-10 aspect-square w-[334px] -translate-y-3/4 translate-x-3/4 bg-[#A7FFBC] blur-[417.8px]"></div>
       {/* Blurry Dots ^ */}
 
-      <div className="flex flex-col gap-8 max-lg:items-center max-lg:pl-[30px] max-lg:text-center lg:pb-20">
+      <div className="flex flex-col gap-8 max-lg:items-center max-lg:text-center lg:pb-20 rtl:max-lg:pl-[30px]">
         <h3 className="text-2xl font-black">{hero_title[websiteLang]}</h3>
         <p>{hero_description[websiteLang]}</p>
         <ContactLink bgColorClassName="bg-background" />
