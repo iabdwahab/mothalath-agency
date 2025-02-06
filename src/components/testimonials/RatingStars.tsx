@@ -7,7 +7,7 @@ function RatingStars({ rating }: { rating: string }) {
     const ratingNumber = Number(rating);
 
     ratingElements.push(
-      <span>
+      <span key={i}>
         <FaStar
           className={`text-sm ${i <= ratingNumber ? "text-background" : "text-[#A7FFBC29]"}`}
         />
