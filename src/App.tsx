@@ -13,7 +13,7 @@ export const WebsiteLangContext = createContext<{
 });
 
 function App() {
-  const [websiteLang, setWebsiteLang] = useState<"en" | "ar">("en");
+  const [websiteLang, setWebsiteLang] = useState<"en" | "ar">("ar");
 
   document.dir = websiteLang === "ar" ? "rtl" : "ltr";
 

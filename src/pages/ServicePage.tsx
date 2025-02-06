@@ -1,41 +1,26 @@
-import { useEffect, useState } from "react";
 import ServiceLanding from "../components/service_landing/Index";
 import { useParams } from "react-router-dom";
 import { ServicePageContext } from "../context/pages/ServicePageContext";
-import {
-  servicePageDataType,
-  servicesPageDefaultData,
-} from "./types/servicesPagesDataTypes";
 import ErrorPage from "./ErrorPage";
-import { ErrorBoundary } from "react-error-boundary";
+import useServicePageData from "./data/useServicePageData";
+import PageLoader from "../components/global/PageLoader";
 
 function ServicePage() {
-  const [pageData, setPageData] = useState<servicePageDataType>(
-    servicesPageDefaultData,
-  );
-  const [isError, setIsError] = useState(false);
-
   const { service_slug } = useParams<{ service_slug: string }>();
 
-  useEffect(() => {
-    fetch(
-      `http://localhost/wordpress/wp-json/wp/v2/services_page?slug=${service_slug}&_fields=acf`,
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.length) {
-          const { acf } = data[0];
+  const { pageData, isLoading, isFounded } = useServicePageData(service_slug || "");
 
-          setPageData(acf);
-        } else {
-          setIsError(true);
-        }
-      });
-  }, []);
+  if (!isFounded) {
+    return <ErrorPage />;
+  }
+
+  if (isLoading) {
+    return <PageLoader />;
+  }
 
   return (
     <ServicePageContext.Provider value={pageData}>
-      {!isError ? <ServiceLanding /> : <ErrorPage />}
+      <ServiceLanding />
     </ServicePageContext.Provider>
   );
 }
