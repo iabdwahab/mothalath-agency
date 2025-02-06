@@ -12,7 +12,6 @@ function ServiceLanding() {
     landing: { landing_heading, landing_description, landing_background_image },
   } = useContext(ServicePageContext);
 
-  console.log(landing_heading);
   return (
     <main
       className="relative z-0 bg-contain bg-top bg-no-repeat pb-12"
