@@ -20,7 +20,7 @@ function NextButton() {
 
   return (
     <Button onClick={goNext} disabled={isLastSlide}>
-      <IoIosArrowBack />
+      <IoIosArrowBack className="ltr:rotate-180" />
     </Button>
   );
 }

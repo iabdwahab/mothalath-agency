@@ -19,7 +19,7 @@ function BackButton() {
 
   return (
     <Button onClick={goBack} disabled={isLastSlide}>
-      <IoIosArrowForward />
+      <IoIosArrowForward className="ltr:rotate-180" />
     </Button>
   );
 }

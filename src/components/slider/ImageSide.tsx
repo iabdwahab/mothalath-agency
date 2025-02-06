@@ -27,23 +27,23 @@ function ImageSide() {
         </div>
         <div className="flex items-center">
           <img src={personOne} alt="Person" />
-          <img src={personTwo} alt="Person" className="-mr-6" />
+          <img src={personTwo} alt="Person" className="ltr:-ml-6 rtl:-mr-6" />
         </div>
       </div>
 
-      <div className="mx-auto w-full max-w-[450px] overflow-hidden rounded-[40px] bg-white md:w-[90%]">
+      <div className="mx-auto w-full max-w-[450px] overflow-hidden rounded-2xl bg-white md:w-[90%]">
         <img
           src={hero_image.url}
           alt={hero_image.alt}
-          className="max-h-[500px] w-full object-cover"
+          className="h-[450px] w-full object-cover"
         />
       </div>
 
-      <div className="relative -mt-[100px] mr-auto grid w-fit grid-cols-[40px,140px] gap-8 rounded-md bg-[#79FD730D] bg-opacity-10 bg-clip-padding pr-4 pt-4 backdrop-blur-sm backdrop-filter md:grid-cols-[1fr,auto] md:gap-12">
+      <div className="relative -mt-[100px] grid w-fit gap-8 rounded-md bg-[#79FD730D] bg-opacity-10 bg-clip-padding pr-4 pt-4 backdrop-blur-sm backdrop-filter md:grid-cols-[1fr,auto] md:gap-12 ltr:ml-auto ltr:grid-cols-[140px,40px] rtl:mr-auto rtl:grid-cols-[40px,140px]">
         <img
           src={triangle}
           alt="Triangle"
-          className="w-14 max-w-full justify-self-start"
+          className="w-14 max-w-full justify-self-start ltr:order-1"
         />
         <img
           src={illustration_image.url}
