@@ -14,8 +14,9 @@ export const defaultHomePageContent: homePageContentType = {
     },
     illustrations_side: {
       consultation_text: { en: "", ar: "" },
-      consultation_image: false,
-      hero_image: false,
+      consultation_image: "",
+      consultation_link_text: { en: "", ar: "" },
+      hero_image: "",
       hero_title: { en: "", ar: "" },
       hero_description: { en: "", ar: "" },
     },
