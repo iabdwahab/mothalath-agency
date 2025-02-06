@@ -8,6 +8,7 @@ import StepsSection from "../components/steps/Index";
 import heroImage from "/imgs/hero.png";
 import { homePageContentType } from "../types/homepageTypes";
 import { defaultHomePageContent } from "../types/homepageTypesDefaultValues";
+import PageLoader from "../components/global/PageLoader";
 
 export const HomePageDataContext = createContext<homePageContentType>(
   defaultHomePageContent,
@@ -19,6 +20,7 @@ function HomePage() {
   );
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+  console.log(isError);
 
   useEffect(() => {
     fetch(
@@ -37,8 +39,10 @@ function HomePage() {
       });
   }, []);
 
+  // return <PageLoader />;
+
   return isLoading ? (
-    <h1>Loading...</h1>
+    <PageLoader />
   ) : (
     <>
       <HomePageDataContext.Provider value={pageData}>

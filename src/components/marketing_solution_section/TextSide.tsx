@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import greenCircle from "/imgs/marketing_section/green-circle.png";
+// import greenCircle from "/imgs/marketing_section/green-circle.png";
 import { WebsiteLangContext } from "../../App";
 import { HomePageDataContext } from "../../pages/HomePage";
 

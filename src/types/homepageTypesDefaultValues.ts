@@ -41,4 +41,5 @@ export const defaultHomePageContent: homePageContentType = {
       feature_description: { en: "", ar: "" },
     },
   },
+  our_customers: {},
 };
