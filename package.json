@@ -8,7 +8,7 @@
     "plugins": [
       "prettier-plugin-tailwindcss"
     ],
-    "printWidth": 99999999
+    "printWidth": 150
   },
   "scripts": {
     "dev": "vite",
