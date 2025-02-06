@@ -11,6 +11,7 @@ const translations = {
   our_customers_opinions: { en: "our customers' opinions", ar: "آراء عملائنا" },
   our_articles: { en: "articles", ar: "مقالاتنا" },
   all_articles: { en: "all articles", ar: "جميع المقالات" },
+  faqs: { en: "FAQs", ar: "الأسئلة الأكثر شيوعًا" },
 };
 
 export default translations;

@@ -1,10 +1,13 @@
 import questionMark from "/icons/question-mark.svg";
 import plusIcon from "/icons/plus-icon.svg";
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
+import { QuestionType } from "./types/types";
+import { WebsiteLangContext } from "../../App";
 
-function Question() {
+function Question({ title, description }: QuestionType) {
   const [open, setOpen] = useState(false);
   const paragraphRef: { current: HTMLParagraphElement | null } = useRef(null);
+  const { websiteLang } = useContext(WebsiteLangContext);
 
   function handleClick() {
     setOpen((prevOpen) => !prevOpen);
@@ -21,9 +24,7 @@ function Question() {
         <div className="flex aspect-square w-7 items-center justify-center rounded-full bg-main">
           <img src={questionMark} alt="Icon" className="w-[10px]" />
         </div>
-        <p className="text-start text-lg font-bold md:text-xl">
-          ما هو التسويق الإلكتروني؟ ولماذا هو مهم لعملي؟
-        </p>
+        <p className="text-start text-lg font-bold md:text-xl">{title[websiteLang]}</p>
         <div className="flex aspect-square w-[30px] items-center justify-center rounded-full bg-background">
           <img
             src={plusIcon}
@@ -37,11 +38,11 @@ function Question() {
         className={`col-start-2 max-h-0 overflow-hidden font-thin duration-300`}
         style={{ maxHeight: open ? paragraphRef.current?.offsetHeight : "0" }}
       >
-        <p ref={paragraphRef} className="pt-4 text-lg">
-          يعتمد الوقت الذي تستغرقه لرؤية النتائج على العديد من العوامل، بما في
-          ذلك طبيعة عملك، وحجم المنافسة، والميزانية المخصصة. ومع ذلك، نعمل على
-          تقديم نتائج ملموسة في أقرب وقت ممكن.
-        </p>
+        <p
+          ref={paragraphRef}
+          className="pt-4 text-lg"
+          dangerouslySetInnerHTML={{ __html: description[websiteLang] }}
+        ></p>
       </div>
     </div>
   );
