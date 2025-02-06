@@ -1,13 +1,26 @@
+import { MultiLangTextType } from "../../types/global";
+
 export type slideDataType = {
-  id: number;
-  textSide: {
-    title: string;
-    description: string;
-    servicePageLink: string;
-  };
-  ImageSide: {
-    title: string;
-    description: string;
+  slug: string;
+  acf: {
+    services_slider_data: {
+      text_side: {
+        title: MultiLangTextType;
+        description: MultiLangTextType;
+      };
+      image_side: {
+        title: MultiLangTextType;
+        description: MultiLangTextType;
+        hero_image: {
+          url: string;
+          alt: string;
+        };
+        illustration_image: {
+          url: string;
+          alt: string;
+        };
+      };
+    };
   };
 };
 
@@ -20,7 +33,6 @@ export type textSideType = {
 };
 
 export type imageSideType = {
-  id: number;
   data: {
     title: string;
     description: string;

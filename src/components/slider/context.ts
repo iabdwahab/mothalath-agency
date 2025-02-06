@@ -6,15 +6,26 @@ const defaultValues = {
   currentSlideIndex: 0,
   setCurrentSlideIndex: () => {},
   slide: {
-    id: 0,
-    ImageSide: {
-      title: "",
-      description: "",
-    },
-    textSide: {
-      title: "",
-      description: "",
-      servicePageLink: "",
+    slug: "",
+    acf: {
+      services_slider_data: {
+        textSide: {
+          title: { en: "", ar: "" },
+          description: { en: "", ar: "" },
+        },
+        ImageSide: {
+          title: { en: "", ar: "" },
+          description: { en: "", ar: "" },
+          hero_image: {
+            url: "",
+            alt: "",
+          },
+          illustration_image: {
+            url: "",
+            alt: "",
+          },
+        },
+      },
     },
   },
 };
