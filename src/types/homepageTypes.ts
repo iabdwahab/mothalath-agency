@@ -43,8 +43,18 @@ export interface FeaturesType {
   special_feature: FeatureItemType;
 }
 
+export interface CustomerImageType {
+  url: string;
+  alt: string;
+}
+
+export interface OurCustomersType {
+  [key: string]: CustomerImageType;
+}
+
 export interface homePageContentType {
   landing: LandingType;
   marketing_solutions: MarketingSolutionsType;
   features: FeaturesType;
+  our_customers: OurCustomersType;
 }

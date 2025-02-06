@@ -17,6 +17,7 @@ function HomePage() {
   const [pageData, setPageData] = useState<homePageContentType>(
     defaultHomePageContent,
   );
+  const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
 
   useEffect(() => {
@@ -29,29 +30,34 @@ function HomePage() {
           const { acf } = data[0];
           console.log(acf);
           setPageData(acf);
+          setIsLoading(false);
         } else {
           setIsError(true);
         }
       });
   }, []);
 
-  return (
-    <HomePageDataContext.Provider value={pageData}>
-      <div
-        className="bg-no-repeat md:bg-[100%,100%]"
-        style={{ backgroundImage: `url("${heroImage}")` }}
-      >
-        <HomeLanding />
-        <HomeFeatures />
-      </div>
-      <MarketingSolutions />
-      <StepsSection />
-      <div className="relative">
-        <span className="absolute left-0 top-1/2 -z-10 h-[334px] max-h-[50vh] w-[334px] max-w-[35vw] -translate-y-1/2 bg-background blur-[334px]"></span>
-        <span className="absolute right-0 top-1/2 -z-10 h-[334px] max-h-[50vh] w-[334px] max-w-[35vw] -translate-y-1/2 bg-background blur-[334px]"></span>
-        <SliderSection />
-      </div>
-    </HomePageDataContext.Provider>
+  return isLoading ? (
+    <h1>Loading...</h1>
+  ) : (
+    <>
+      <HomePageDataContext.Provider value={pageData}>
+        <div
+          className="bg-no-repeat md:bg-[100%,100%]"
+          style={{ backgroundImage: `url("${heroImage}")` }}
+        >
+          <HomeLanding />
+          <HomeFeatures />
+        </div>
+        <MarketingSolutions />
+        <StepsSection />
+        <div className="relative">
+          <span className="absolute left-0 top-1/2 -z-10 h-[334px] max-h-[50vh] w-[334px] max-w-[35vw] -translate-y-1/2 bg-background blur-[334px]"></span>
+          <span className="absolute right-0 top-1/2 -z-10 h-[334px] max-h-[50vh] w-[334px] max-w-[35vw] -translate-y-1/2 bg-background blur-[334px]"></span>
+          <SliderSection />
+        </div>
+      </HomePageDataContext.Provider>
+    </>
   );
 }
 export default HomePage;

@@ -1,6 +1,6 @@
 import Container from "../Container";
 import ContactConsultationButtons from "../global/ContactConsultationButtons";
-import OurClients from "./OurClients";
+import OurCustomers from "./OurCustomers";
 import StepsContainer from "./StepsContainer";
 
 function StepsSection() {
@@ -8,9 +8,7 @@ function StepsSection() {
     <section className="pb-28 pt-section">
       <Container className="grid gap-8">
         <StepsContainer />
-        <div className="py-6">
-          <OurClients />
-        </div>
+        <OurCustomers />
         <ContactConsultationButtons className="md:mx-auto" />
       </Container>
     </section>
