@@ -5,6 +5,7 @@ import BackButton from "./buttons/BackButton";
 import NextButton from "./buttons/NextButton";
 import ConsultationButton from "../global/ConsultationButton";
 import { WebsiteLangContext } from "../../App";
+import translations from "../../tanslations/translations";
 
 function TextSide() {
   const { websiteLang } = useContext(WebsiteLangContext);
@@ -28,11 +29,8 @@ function TextSide() {
           <NextButton />
         </div>
         <div className="flex gap-3 max-lg:justify-center max-md:flex-col">
-          <SectionButtonLink
-            href={`/services/${slug}`}
-            className="light-button"
-          >
-            احجز خدمتك الآن
+          <SectionButtonLink href={`/services/${slug}`} className="light-button capitalize">
+            {translations.book_service_now[websiteLang]}
           </SectionButtonLink>
           <ConsultationButton />
         </div>
