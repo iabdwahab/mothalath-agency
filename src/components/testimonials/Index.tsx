@@ -4,14 +4,13 @@ import Container from "../Container";
 import ContactConsultationButtons from "../global/ContactConsultationButtons";
 import SectionHeading from "../global/SectionHeading";
 import TestimonialsCard from "./TestimonialsCard";
-import useTestimonialsData from "./useTestimonialsData";
+import useTestimonialsData from "./data/useTestimonialsData";
 import { WebsiteLangContext } from "../../App";
+import Loader from "../global/Loader";
 
 function Testimonials() {
   const { websiteLang } = useContext(WebsiteLangContext);
   const { testimonials, isLoading } = useTestimonialsData();
-
-  console.log(testimonials);
 
   const testimonialsElements = testimonials.map((testimonial, index: number) => {
     const { acf } = testimonial;
@@ -26,7 +25,11 @@ function Testimonials() {
           {translations.our_customers_opinions[websiteLang]}
         </SectionHeading>
 
-        <div className="grid-cards-cols gap-4">{testimonialsElements}</div>
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <div className="grid-cards-cols gap-4">{testimonialsElements}</div>
+        )}
 
         <ContactConsultationButtons className="md:justify-center" />
       </Container>
