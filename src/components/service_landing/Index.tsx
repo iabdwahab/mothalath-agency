@@ -8,8 +8,9 @@ import { useContext } from "react";
 function ServiceLanding() {
   const { websiteLang } = useContext(WebsiteLangContext);
 
-  const { landing_heading, landing_description, landing_background_image } =
-    useContext(ServicePageContext);
+  const {
+    landing: { landing_heading, landing_description, landing_background_image },
+  } = useContext(ServicePageContext);
 
   console.log(landing_heading);
   return (

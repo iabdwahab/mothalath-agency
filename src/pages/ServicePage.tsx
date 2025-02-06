@@ -7,6 +7,7 @@ import {
   servicesPageDefaultData,
 } from "./types/servicesPagesDataTypes";
 import ErrorPage from "./ErrorPage";
+import { ErrorBoundary } from "react-error-boundary";
 
 function ServicePage() {
   const [pageData, setPageData] = useState<servicePageDataType>(

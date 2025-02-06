@@ -6,11 +6,13 @@ import { WebsiteLangContext } from "../../App";
 
 function ServicesContainer() {
   const { websiteLang } = useContext(WebsiteLangContext);
-  const { features, features_title } = useContext(ServicePageContext);
+  const {
+    features: { features_list, features_title },
+  } = useContext(ServicePageContext);
 
   //Run this to know why I did this.
-  console.log(features);
-  const featuresList = [...Object.values(features)];
+  // console.log(features_list);
+  const featuresList = [...Object.values(features_list)];
 
   return (
     <div>
