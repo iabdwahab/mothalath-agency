@@ -8,6 +8,7 @@ const translations = {
   services: { en: "services", ar: "خدماتنا" },
   blog: { en: "blog", ar: "المدونة" },
   your_best_partner: { en: "your best partner", ar: "شريكك الأفضل" },
+  our_customers_opinions: { en: "our customers' opinions", ar: "آراء عملائنا" },
 };
 
 export default translations;
