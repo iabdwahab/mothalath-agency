@@ -1,3 +1,5 @@
+import { transform } from "typescript";
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -33,6 +35,19 @@ export default {
       },
       backgroundImage: {
         lines: 'url("/imgs/slider/line.svg")',
+      },
+      animation: {
+        fadeInToTop: "fadeInToTop 0.3s ease-in-out",
+      },
+      keyframes: {
+        fadeInToTop: {
+          "0%": { opacity: "0", transform: "translateY(40px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        fadeInToBottom: {
+          "100%": { opacity: "0", transform: "translateY(0)" },
+          "0%": { opacity: "1", transform: "translateY(40px)" },
+        },
       },
     },
   },
