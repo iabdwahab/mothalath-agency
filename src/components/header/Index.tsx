@@ -19,7 +19,7 @@ function Header() {
     document.body.style.overflow = "";
   }
 
-  const { setWebsiteLang } = useContext(WebsiteLangContext);
+  const { websiteLang, setWebsiteLang } = useContext(WebsiteLangContext);
 
   function toggleLang() {
     setWebsiteLang((prev: "ar" | "en") => (prev === "ar" ? "en" : "ar"));
@@ -34,8 +34,15 @@ function Header() {
         <Container className="flex items-center justify-between rounded-full border-[0.1px] border-[#ffffff34] bg-[#1E1E1E1A] px-6 py-4 backdrop-blur-md">
           <LogoContainer />
           <DesktopNavbar />
-          <ContactButton className="py-2 max-md:hidden" />
-          <button onClick={toggleLang}>Lang</button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={toggleLang}
+              className="rounded-full bg-main px-4 py-2 text-sm font-black capitalize text-background outline-1 outline-main duration-medium hover:bg-background hover:text-main hover:outline"
+            >
+              {websiteLang === "ar" ? "English" : "عربي"}
+            </button>
+            <ContactButton className="py-2 max-md:hidden" />
+          </div>
           <ToggleButton open={open} setOpen={setOpen} />
         </Container>
       </header>
