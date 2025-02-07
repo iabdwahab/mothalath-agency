@@ -5,6 +5,7 @@ import Header from "../components/header/Index";
 import FAQs from "../components/faqs/Index";
 import Testimonials from "../components/testimonials/Index";
 import { useEffect } from "react";
+import Modal from "../components/global/Modal";
 
 function MainLayout() {
   const location = useLocation();
@@ -17,6 +18,7 @@ function MainLayout() {
   return (
     <div className="relative overflow-x-hidden bg-contain bg-top text-white">
       <Header />
+      {/* <Modal /> */}
       <Outlet />
       <Testimonials />
       <Articles />
