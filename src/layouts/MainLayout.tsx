@@ -5,7 +5,7 @@ import Header from "../components/header/Index";
 import FAQs from "../components/faqs/Index";
 import Testimonials from "../components/testimonials/Index";
 import { useEffect } from "react";
-import Modal from "../components/global/Modal";
+// import Modal from "../components/global/Modal";
 
 function MainLayout() {
   const location = useLocation();

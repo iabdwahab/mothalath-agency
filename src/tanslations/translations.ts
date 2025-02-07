@@ -12,6 +12,12 @@ const translations = {
   our_articles: { en: "articles", ar: "مقالاتنا" },
   all_articles: { en: "all articles", ar: "جميع المقالات" },
   faqs: { en: "FAQs", ar: "الأسئلة الأكثر شيوعًا" },
+  copyright_text: {
+    en: "all rights reserved to Mothalath agency.",
+    ar: "جميع الحقوق محفوظة لشركة مثلث.",
+  },
+  enter_your_email: { en: "enter your email", ar: "أدخل بريدك الإلكتروني" },
+  short_links: { en: "short links", ar: "روابط مختصرة" },
 };
 
 export default translations;

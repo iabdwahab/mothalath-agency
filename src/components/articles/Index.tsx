@@ -10,7 +10,7 @@ import { ArticleType } from "./types/types";
 
 function Articles() {
   const { websiteLang } = useContext(WebsiteLangContext);
-  const { articles, isLoading } = useArticlesData();
+  const { articles } = useArticlesData();
   console.log(articles);
 
   return (

@@ -4,7 +4,7 @@ function useArticlesData() {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const API_URL = `http://localhost/wordpress/wp-json/wp/v2/articles?_fields=slug,acf,date_gmt`;
+  const API_URL = `https://mothalthagency.com/wp-json/wp/v2/articles?_fields=slug,acf,date_gmt`;
 
   useEffect(() => {
     fetch(API_URL)

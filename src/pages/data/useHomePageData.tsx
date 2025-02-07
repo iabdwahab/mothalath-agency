@@ -6,7 +6,7 @@ function useHomePageData() {
   const [pageData, setPageData] = useState<homePageContentType>(defaultHomePageContent);
   const [isLoading, setIsLoading] = useState(true);
 
-  const API_URL = "http://localhost/wordpress/wp-json/wp/v2/pages?slug=home&_fields=acf";
+  const API_URL = "https://mothalthagency.com/wp-json/wp/v2/pages?slug=home&_fields=acf";
 
   useEffect(() => {
     fetch(API_URL)

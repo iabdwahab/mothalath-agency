@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Article({ data }: { data: ArticleType }) {
   const { websiteLang } = useContext(WebsiteLangContext);
   const { slug, date_gmt, acf } = data;
-  const { article_image, article_body, title, summary } = acf;
+  const { article_image, title, summary } = acf;
 
   return (
     <div className="flex flex-col gap-4">

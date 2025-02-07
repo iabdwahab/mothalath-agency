@@ -9,11 +9,11 @@ const defaultValues = {
     slug: "",
     acf: {
       services_slider_data: {
-        textSide: {
+        text_side: {
           title: { en: "", ar: "" },
           description: { en: "", ar: "" },
         },
-        ImageSide: {
+        image_side: {
           title: { en: "", ar: "" },
           description: { en: "", ar: "" },
           hero_image: {

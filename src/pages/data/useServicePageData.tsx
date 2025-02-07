@@ -10,7 +10,7 @@ function useServicePageData(service_slug: string) {
   const [isFounded, setIsFounded] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost/wordpress/wp-json/wp/v2/services_page?slug=${service_slug}&_fields=acf`)
+    fetch(`https://mothalthagency.com/wp-json/wp/v2/services_page?slug=${service_slug}&_fields=acf`)
       .then((res) => res.json())
       .then((data) => {
         if (data.length) {

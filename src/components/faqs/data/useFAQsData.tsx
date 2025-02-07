@@ -4,7 +4,7 @@ function useFAQsData() {
   const [faqs, setFaqs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const API_URL = `http://localhost/wordpress/wp-json/wp/v2/faqs?_fields=acf`;
+  const API_URL = `https://mothalthagency.com/wp-json/wp/v2/faqs?_fields=acf`;
 
   useEffect(() => {
     fetch(API_URL)
