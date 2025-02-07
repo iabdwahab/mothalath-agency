@@ -13,10 +13,7 @@ function TextSide() {
 
   return (
     <div className="grid content-center items-center gap-10 max-md:text-center md:grid-cols-3 md:grid-rows-[auto,auto]">
-      <p
-        className="md:row-start-2"
-        dangerouslySetInnerHTML={{ __html: first_text[websiteLang] }}
-      >
+      <p className="md:row-start-1" dangerouslySetInnerHTML={{ __html: first_text[websiteLang] }}>
         {/* نحن في <span className="text-background">مثلث</span>، متخصصون في التسويق
         الالكتروني نقدم حلولاً تسويقية مبتكرة تساعد الشركات على تحقيق نمو مستدام
         في عالم التجارة الإلكترونية. من خلال افضل الاستراتيجيات، نضمن لك زيادة
@@ -49,7 +46,7 @@ function TextSide() {
         </h2>
       </div>
       <p
-        className="md:col-start-3"
+        className="row-start-2 md:col-start-3"
         dangerouslySetInnerHTML={{ __html: last_text[websiteLang] }}
       >
         {/* <span className="text-background">حل مشاكل العملاء</span>: تحديد المشاكل

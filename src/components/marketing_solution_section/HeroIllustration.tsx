@@ -13,7 +13,7 @@ function HeroIllustration() {
   } = useContext(HomePageDataContext);
 
   return (
-    <div className="relative z-0 grid h-full overflow-hidden rounded-lg bg-[#0D0D0D] pt-10 max-lg:px-[20px] lg:grid-cols-[1fr_58%] lg:pt-20 ltr:pl-10">
+    <div className="relative z-0 grid h-full overflow-hidden rounded-lg bg-[#0D0D0D] pt-10 max-lg:px-[20px] lg:grid-cols-[1fr_58%] lg:pt-20 ltr:pl-10 rtl:pr-10">
       {/* Blurry Dots: */}
       <div className="absolute left-0 top-0 -z-10 aspect-square w-[334px] -translate-x-3/4 translate-y-3/4 bg-[#A7FFBC] blur-[417.8px]"></div>
       <div className="absolute right-0 top-0 -z-10 aspect-square w-[334px] -translate-y-3/4 translate-x-3/4 bg-[#A7FFBC] blur-[417.8px]"></div>
