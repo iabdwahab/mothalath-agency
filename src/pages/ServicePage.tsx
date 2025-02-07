@@ -15,7 +15,10 @@ function ServicePage() {
   }
 
   if (isLoading) {
+    document.body.style.overflow = "hidden";
     return <PageLoader />;
+  } else {
+    document.body.style.overflow = "";
   }
 
   return (
