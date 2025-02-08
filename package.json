@@ -1,7 +1,6 @@
 {
   "name": "mothalath-agency",
   "private": true,
-  "homepage": "https://iabdwahab.github.io/mothalath-agency",
   "version": "0.0.0",
   "type": "module",
   "prettier": {

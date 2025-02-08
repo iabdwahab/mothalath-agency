@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { defaultHomePageContent } from "../../types/homepageTypesDefaultValues";
 import { homePageContentType } from "../../types/homepageTypes";
+import { API_BASE } from "../../global_data/globalData";
 
 function useHomePageData() {
   const [pageData, setPageData] = useState<homePageContentType>(defaultHomePageContent);
   const [isLoading, setIsLoading] = useState(true);
 
-  const API_URL = "https://mothalthagency.com/wp-json/wp/v2/pages?slug=home&_fields=acf";
+  const API_URL = `${API_BASE}/pages?slug=home&_fields=acf`;
 
   useEffect(() => {
     fetch(API_URL)

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { servicePageDataType, servicesPageDefaultData } from "../types/servicesPagesDataTypes";
 import { useLocation } from "react-router-dom";
+import { API_BASE } from "../../global_data/globalData";
 
 function useServicePageData(service_slug: string) {
   const { pathname } = useLocation();
@@ -10,7 +11,7 @@ function useServicePageData(service_slug: string) {
   const [isFounded, setIsFounded] = useState(true);
 
   useEffect(() => {
-    fetch(`https://mothalthagency.com/wp-json/wp/v2/services_page?slug=${service_slug}&_fields=acf`)
+    fetch(`${API_BASE}/services_page?slug=${service_slug}&_fields=acf`)
       .then((res) => res.json())
       .then((data) => {
         if (data.length) {
