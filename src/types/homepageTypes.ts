@@ -43,6 +43,19 @@ export interface FeaturesType {
   special_feature: FeatureItemType;
 }
 
+export interface StepsType {
+  steps_list: {
+    [key: string]: {
+      title: MultiLangTextType;
+      description: MultiLangTextType;
+    };
+  };
+}
+export interface StepType {
+  title: MultiLangTextType;
+  description: MultiLangTextType;
+}
+
 export interface CustomerImageType {
   url: string;
   alt: string;
@@ -57,4 +70,5 @@ export interface homePageContentType {
   marketing_solutions: MarketingSolutionsType;
   features: FeaturesType;
   our_customers: OurCustomersType;
+  steps: StepsType;
 }
