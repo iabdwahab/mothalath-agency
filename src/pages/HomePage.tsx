@@ -26,7 +26,7 @@ function HomePage() {
 
   return (
     <HomePageDataContext.Provider value={pageData}>
-      {/* <div
+      <div
         className="bg-no-repeat md:bg-[100%,100%]"
         style={{
           backgroundImage: `url("${document.dir === "rtl" ? heroImageRTL : heroImageLTR}")`,
@@ -35,7 +35,7 @@ function HomePage() {
         <HomeLanding />
         <HomeFeatures />
       </div>
-      <MarketingSolutions /> */}
+      <MarketingSolutions />
       <StepsSection />
       <div className="relative">
         <span className="absolute left-0 top-1/2 -z-10 h-[334px] max-h-[50vh] w-[334px] max-w-[35vw] -translate-y-1/2 bg-background blur-[334px]"></span>
