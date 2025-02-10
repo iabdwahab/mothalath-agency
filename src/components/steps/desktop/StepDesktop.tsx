@@ -1,9 +1,9 @@
 import { GoTriangleDown } from "react-icons/go";
-import { StepType } from "../../types/homepageTypes";
-import { WebsiteLangContext } from "../../App";
+import { StepType } from "../../../types/homepageTypes";
+import { WebsiteLangContext } from "../../../App";
 import { useContext } from "react";
 
-function Step({ data }: { data: StepType }) {
+function StepDesktop({ data }: { data: StepType }) {
   const { websiteLang } = useContext(WebsiteLangContext);
 
   return (
@@ -19,4 +19,4 @@ function Step({ data }: { data: StepType }) {
     </div>
   );
 }
-export default Step;
+export default StepDesktop;
