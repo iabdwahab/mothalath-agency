@@ -37,7 +37,7 @@ export function NavLinksElements() {
           <li key={navLink.id} className="max-md:w-full">
             <a
               href={navLink.link}
-              className={`flex items-center gap-1 font-bold capitalize duration-medium hover:text-supporter max-md:w-full max-md:py-5 max-md:text-center ${index !== 0 ? "border-[#ffffff31] max-md:border-t" : ""}`}
+              className={`flex items-center justify-center gap-1 font-bold capitalize duration-medium hover:text-supporter max-md:w-full max-md:py-5 max-md:text-center ${index !== 0 ? "border-[#ffffff31] max-md:border-t" : ""}`}
             >
               {navLink.text[websiteLang]}{" "}
             </a>
