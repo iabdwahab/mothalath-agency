@@ -8,7 +8,7 @@ function StepsContainerMobile({ className }: { className?: string }) {
   } = useContext(HomePageDataContext);
 
   return (
-    <div className={`relative grid grid-cols-[60px,1fr] ${className}`}>
+    <div className={`relative mt-6 grid grid-cols-[60px,1fr] ${className}`}>
       {Object.values(steps_list).map((step, index) => (
         <>
           {index !== 0 && <div className="col-start-1 mx-auto h-10 w-[2px] bg-[#ffffff]"></div>}
