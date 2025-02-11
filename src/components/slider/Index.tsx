@@ -5,15 +5,14 @@ import TextSide from "./TextSide";
 // import { sliderData } from "./data";
 import { SliderContext } from "./context";
 import { slideDataType } from "./types";
+import { API_BASE } from "../../global_data/globalData";
 
 function SliderSection() {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [sliderData, setSliderData] = useState<slideDataType[]>([]);
 
   useEffect(() => {
-    fetch(
-      `http://localhost/wordpress/wp-json/wp/v2/services_page?_fields=slug,acf.services_slider_data`,
-    )
+    fetch(`${API_BASE}/services_page?_fields=slug,acf.services_slider_data`)
       .then((res) => res.json())
       .then((data) => {
         setSliderData(data);
