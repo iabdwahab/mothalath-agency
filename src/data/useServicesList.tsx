@@ -10,6 +10,7 @@ function useServicesList() {
       .then((res) => res.json())
       .then((data) => {
         setList(data);
+        setIsLoading(false);
       });
   }, []);
 

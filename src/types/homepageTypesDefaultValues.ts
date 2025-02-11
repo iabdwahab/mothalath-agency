@@ -42,4 +42,24 @@ export const defaultHomePageContent: homePageContentType = {
     },
   },
   our_customers: {},
+  steps: {
+    steps_list: {
+      step_1: {
+        title: { en: "", ar: "" },
+        description: { en: "", ar: "" },
+      },
+      step_2: {
+        title: { en: "", ar: "" },
+        description: { en: "", ar: "" },
+      },
+      step_3: {
+        title: { en: "", ar: "" },
+        description: { en: "", ar: "" },
+      },
+      step_4: {
+        title: { en: "", ar: "" },
+        description: { en: "", ar: "" },
+      },
+    },
+  },
 };
