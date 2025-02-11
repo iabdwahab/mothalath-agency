@@ -1,10 +1,10 @@
 import Container from "../Container";
 
 import { useState } from "react";
-import MobileNavbar from "./MobileNavbar";
+import MobileNavbar from "./mobile/MobileNavbar";
 import DesktopNavbar from "./DesktopNavbar";
 import ContactButton from "./ContactButton";
-import ToggleButton from "./ToggleButton";
+import ToggleButton from "./mobile/ToggleButton";
 import LogoContainer from "./LogoContainer";
 import Overlay from "./Overlay";
 import SwitchLangButton from "./SwitchLangButton";
