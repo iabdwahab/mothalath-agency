@@ -1,4 +1,4 @@
-import { NavLinksElements } from "./data";
+import { NavLinksElements } from "./NavLinksElements";
 
 function DesktopNavbar() {
   return (

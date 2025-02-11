@@ -1,5 +1,5 @@
 import ContactButton from "../ContactButton";
-import { NavLinksElements } from "../data";
+import { NavLinksElements } from "../NavLinksElements";
 
 function MobileNavbar({ open }: { open: boolean }) {
   return (
