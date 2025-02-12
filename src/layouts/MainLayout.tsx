@@ -5,6 +5,7 @@ import Header from "../components/header/Index";
 import FAQs from "../components/faqs/Index";
 import Testimonials from "../components/testimonials/Index";
 import { useEffect } from "react";
+import ContactForm from "../components/contact_form/Index";
 // import Modal from "../components/global/Modal";
 
 function MainLayout() {
@@ -18,11 +19,11 @@ function MainLayout() {
   return (
     <div className="relative overflow-x-hidden bg-contain bg-top text-white">
       <Header />
-      {/* <Modal /> */}
       <Outlet />
       <Testimonials />
       <Articles />
       <FAQs />
+      <ContactForm />
       <Footer />
     </div>
   );
