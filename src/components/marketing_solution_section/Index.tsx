@@ -4,7 +4,7 @@ import TextSide from "./TextSide";
 
 function MarketingSolutions() {
   return (
-    <section className="py-section">
+    <section className="py-section" id="marketing-solutions">
       <Container className="grid flex-col gap-16">
         <TextSide />
         <IllustrationsSide />

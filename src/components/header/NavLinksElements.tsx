@@ -4,6 +4,7 @@ import { WebsiteLangContext } from "../../App";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import ServicesDropMenu from "./ServicesDropMenu";
 import { navLinks } from "./data/navLink";
+import { Link } from "react-router-dom";
 
 export function NavLinksElements() {
   const { websiteLang } = useContext(WebsiteLangContext);
@@ -28,12 +29,12 @@ export function NavLinksElements() {
 
         return (
           <li key={navLink.id} className="max-md:w-full">
-            <a
-              href={navLink.link}
+            <Link
+              to={navLink.link}
               className={`flex items-center justify-center gap-1 font-bold capitalize duration-medium hover:text-supporter max-md:w-full max-md:py-5 max-md:text-center ${index !== 0 ? "border-[#ffffff31] max-md:border-t" : ""}`}
             >
               {navLink.text[websiteLang]}{" "}
-            </a>
+            </Link>
           </li>
         );
       })}

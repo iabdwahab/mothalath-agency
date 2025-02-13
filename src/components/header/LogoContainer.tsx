@@ -1,11 +1,12 @@
+import { Link } from "react-router-dom";
 import logoText from "/logo-text.png";
 
 function LogoContainer() {
   return (
     <div>
-      <a href="#">
+      <Link to="/">
         <img src={logoText} alt="Logo" className="w-24" />
-      </a>
+      </Link>
     </div>
   );
 }

@@ -14,7 +14,7 @@ function Articles() {
   console.log(articles);
 
   return (
-    <section className="py-section">
+    <section className="py-section" id="articles">
       <Container className="flex flex-col gap-section py-section">
         <SectionHeading>{translations.our_articles[websiteLang]}</SectionHeading>
 
