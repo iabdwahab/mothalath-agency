@@ -104,7 +104,7 @@ function ContactForm() {
               >
                 <option value="">{translations.service_choose[websiteLang]}</option>
                 {servicesList.map((service) => (
-                  <option value={service.slug}>{service.acf.name[websiteLang]}</option>
+                  <option value={service.acf.name.en}>{service.acf.name[websiteLang]}</option>
                 ))}
               </select>
               {errors.service && <ErrorMessage>{errors.service.message}</ErrorMessage>}
