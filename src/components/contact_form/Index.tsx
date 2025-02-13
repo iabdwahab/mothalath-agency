@@ -1,11 +1,15 @@
 import { useState } from "react";
 import Container from "../Container";
 import illustration from "/imgs/form/growth.png";
-import { servicesData } from "../service_landing/data";
+import { addDoc, collection } from "firebase/firestore";
+import { firestoreDB } from "../../utils/firebaseUtils";
+
 function ContactForm() {
   const inputStyles = `px-4 py-3 text-lg bg-black border border-[#ffffff34] rounded-lg text-white w-full`;
   const labelStyles = `flex flex-col gap-2`;
   const labelTitleStyles = `text-lg`;
+
+  const [status, setStatus] = useState<"initial" | "submitting" | "sended">("initial");
 
   const [formData, setFormData] = useState({
     name: "",
@@ -21,7 +25,19 @@ function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
-  console.log(formData);
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    formData.name.length < 4
+      ? alert("الاسم يجب أن يتكون من 4 أحرف على الأقل.")
+      : setStatus("submitting");
+
+    // try {
+    //   const docRef = await addDoc(collection(firestoreDB, "messages"), formData);
+    // } catch (error) {
+    //   console.log(error);
+    // }
+  }
 
   return (
     <section className="bg-black py-section text-white">
@@ -32,7 +48,7 @@ function ContactForm() {
         <div className="mx-auto w-full max-w-lg rounded-lg border border-[#ffffff34] px-4 py-8">
           <h4 className="text-center text-3xl text-background">تواصل معنا</h4>
           <hr className="my-6 border-[#ffffff34]" />
-          <form className="grid gap-4">
+          <form className="grid gap-4" onSubmit={handleSubmit}>
             <label className={labelStyles}>
               <span className={labelTitleStyles}>الاسم:</span>
               <input
@@ -42,6 +58,9 @@ function ContactForm() {
                 className={inputStyles}
                 onChange={handleChange}
               />
+              <p className="text-sm text-red-500" id="name-error">
+                يجب أن يتكون الاسم من 4 أحرف على الأقل.
+              </p>
             </label>
 
             <label className={labelStyles}>

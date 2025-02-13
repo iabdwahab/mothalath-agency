@@ -19,11 +19,11 @@ function MainLayout() {
   return (
     <div className="relative overflow-x-hidden bg-contain bg-top text-white">
       <Header />
+      <ContactForm />
       <Outlet />
       <Testimonials />
       <Articles />
       <FAQs />
-      <ContactForm />
       <Footer />
     </div>
   );
