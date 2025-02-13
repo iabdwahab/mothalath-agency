@@ -18,6 +18,30 @@ const translations = {
   },
   enter_your_email: { en: "enter your email", ar: "أدخل بريدك الإلكتروني" },
   short_links: { en: "short links", ar: "روابط مختصرة" },
+  send_succes: { en: "sent succesfully.", ar: "تم الإرسال بنجاح." },
+  try_again: { en: "please try again.", ar: "يرجى المحاولة مرة أخرى." },
+  name: { en: "name", ar: "الاسم" },
+  name_required: { en: "name is required", ar: "يجب إدخال الاسم" },
+  name_4_chars: {
+    en: "name must be at least 4 characters",
+    ar: "يجب أن يتكون الاسم من 4 أحرف على الأقل",
+  },
+  phone_number: { en: "phone number", ar: "رقم الهاتف" },
+  phone_required: { en: "phone number is required", ar: "يجب إدخال رقم الهاتف" },
+  email: { en: "email", ar: "البريد الإلكتروني" },
+  email_required: { en: "email is required", ar: "يجب إدخال البريد الإلكتروني" },
+  email_correct: { en: "please enter a valid email", ar: "يرجى إدخال بريد إلكتروني صحيح" },
+  service: { en: "service", ar: "الخدمة المطلوبة" },
+  service_required: { en: "service is required", ar: "يجب اختيار خدمة" },
+  service_choose: { en: "choose a service", ar: "اختر خدمة" },
+  message: { en: "message", ar: "الرسالة" },
+  message_required: { en: "message is required", ar: "يجب إدخال الرسالة" },
+  message_10_chars: {
+    en: "message must be at least 10 characters",
+    ar: "يجب أن تتكون الرسالة من 10 أحرف على الأقل",
+  },
+  send: { en: "send", ar: "إرسال" },
+  sending: { en: "sending...", ar: "جاري الإرسال..." },
 };
 
 export default translations;

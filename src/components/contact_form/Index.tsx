@@ -4,17 +4,15 @@ import illustration from "/imgs/form/growth.png";
 import { addDoc, collection } from "firebase/firestore";
 import { firestoreDB } from "../../utils/firebaseUtils";
 import ErrorMessage from "./ErrorMessage";
-import { useRef } from "react";
-
-type FormData = {
-  name: string;
-  phone: string;
-  email: string;
-  service: string;
-  message: string;
-};
+import { useContext, useRef } from "react";
+import translations from "../../tanslations/translations";
+import { WebsiteLangContext } from "../../App";
+import useServicesList from "../../data/useServicesList";
+import { FormData } from "./types";
 
 function ContactForm() {
+  const { websiteLang } = useContext(WebsiteLangContext);
+  const { list: servicesList } = useServicesList();
   const {
     register,
     handleSubmit,
@@ -26,9 +24,9 @@ function ContactForm() {
   async function onSubmit(data: FormData) {
     try {
       await addDoc(collection(firestoreDB, "messages"), data);
-      alert("تم إرسال الرسالة بنجاح!");
+
       if (statusElement.current) {
-        statusElement.current.textContent = "تم الإرسال بنجاح.";
+        statusElement.current.textContent = translations.send_succes[websiteLang];
         statusElement.current.classList.add("bg-green-500");
         statusElement.current.classList.remove("hidden");
       }
@@ -37,7 +35,7 @@ function ContactForm() {
       console.error("Error submitting form:", error);
 
       if (statusElement.current) {
-        statusElement.current.textContent = "يرجى المحاولة مرة أخرى.";
+        statusElement.current.textContent = translations.try_again[websiteLang];
         statusElement.current.classList.add("bg-red-500");
         statusElement.current.classList.remove("hidden");
       }
@@ -45,78 +43,81 @@ function ContactForm() {
   }
 
   return (
-    <section className="bg-black py-section text-white">
+    <section className="bg-black py-section capitalize text-white">
       <Container className="grid-cols-2 lg:grid">
         <div className="flex items-center justify-center max-lg:hidden">
           <img src={illustration} alt="Illustration" className="w-full" />
         </div>
         <div className="mx-auto w-full max-w-lg rounded-lg border border-[#ffffff34] px-4 py-8">
-          <h4 className="text-center text-3xl text-background">تواصل معنا</h4>
+          <h4 className="text-center text-3xl text-background">
+            {translations.contact_us[websiteLang]}
+          </h4>
           <hr className="my-6 border-[#ffffff34]" />
           <form className="grid gap-4" onSubmit={handleSubmit(onSubmit)}>
             <label className="flex flex-col gap-2">
-              <span className="text-lg">الاسم:</span>
+              <span className="text-lg">{translations.name[websiteLang]}:</span>
               <input
                 type="text"
                 {...register("name", {
-                  required: "يجب إدخال الاسم",
-                  minLength: { value: 4, message: "يجب أن يتكون الاسم من 4 أحرف على الأقل" },
+                  required: translations.name_required[websiteLang],
+                  minLength: { value: 4, message: translations.name_4_chars[websiteLang] },
                 })}
-                placeholder="الاسم"
+                placeholder={translations.name[websiteLang]}
                 className="w-full rounded-lg border border-[#ffffff34] bg-black px-4 py-3 text-lg text-white"
               />
               {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-lg">رقم الهاتف:</span>
+              <span className="text-lg">{translations.phone_number[websiteLang]}:</span>
               <input
-                type="tel"
-                {...register("phone", { required: "يجب إدخال رقم الهاتف" })}
-                placeholder="رقم الهاتف"
+                type="text"
+                {...register("phone", { required: translations.phone_required[websiteLang] })}
+                placeholder={translations.phone_number[websiteLang]}
                 className="w-full rounded-lg border border-[#ffffff34] bg-black px-4 py-3 text-lg text-white"
               />
               {errors.phone && <ErrorMessage>{errors.phone.message}</ErrorMessage>}
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-lg">البريد الإلكتروني:</span>
+              <span className="text-lg">{translations.email[websiteLang]}:</span>
               <input
                 type="email"
                 {...register("email", {
-                  required: "يجب إدخال البريد الإلكتروني",
+                  required: translations.email_required[websiteLang],
                   pattern: {
                     value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                    message: "يجب إدخال بريد إلكتروني صحيح",
+                    message: translations.email_correct[websiteLang],
                   },
                 })}
-                placeholder="البريد الإلكتروني"
+                placeholder={translations.email[websiteLang]}
                 className="w-full rounded-lg border border-[#ffffff34] bg-black px-4 py-3 text-lg text-white"
               />
               {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-lg">الخدمة المطلوبة:</span>
+              <span className="text-lg">{translations.service[websiteLang]}:</span>
               <select
-                {...register("service", { required: "يجب اختيار خدمة" })}
+                {...register("service", { required: translations.service_required[websiteLang] })}
                 className="w-full rounded-lg border border-[#ffffff34] bg-black px-4 py-3 text-lg text-white"
               >
-                <option value="">اختر خدمة</option>
-                <option value="web-dev">تصميم المواقع</option>
-                <option value="social-media">تطوير</option>
+                <option value="">{translations.service_choose[websiteLang]}</option>
+                {servicesList.map((service) => (
+                  <option value={service.slug}>{service.acf.name[websiteLang]}</option>
+                ))}
               </select>
               {errors.service && <ErrorMessage>{errors.service.message}</ErrorMessage>}
             </label>
 
             <label className="flex flex-col gap-2">
-              <span className="text-lg">الرسالة:</span>
+              <span className="text-lg">{translations.message[websiteLang]}:</span>
               <textarea
                 {...register("message", {
-                  required: "يجب إدخال الرسالة",
-                  minLength: { value: 10, message: "يجب أن تكون الرسالة 10 أحرف على الأقل" },
+                  required: translations.message_required[websiteLang],
+                  minLength: { value: 10, message: translations.message_10_chars[websiteLang] },
                 })}
-                placeholder="الرسالة"
+                placeholder={translations.message[websiteLang]}
                 className="w-full rounded-lg border border-[#ffffff34] bg-black px-4 py-3 text-lg text-white"
                 rows={4}
               />
@@ -124,11 +125,11 @@ function ContactForm() {
             </label>
 
             <button
-              className="mt-4 w-full rounded-lg bg-main px-4 py-2 text-lg font-bold text-background duration-medium hover:border-background hover:bg-background hover:text-main"
+              className="mt-4 w-full rounded-lg bg-main px-4 py-2 text-lg font-bold capitalize text-background duration-medium hover:border-background hover:bg-background hover:text-main"
               type="submit"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "جاري الإرسال..." : "إرسال"}
+              {isSubmitting ? translations.sending[websiteLang] : translations.send[websiteLang]}
             </button>
           </form>
           <p ref={statusElement} className="mt-3 hidden rounded-lg py-2 text-center font-bold"></p>
