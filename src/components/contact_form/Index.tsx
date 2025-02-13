@@ -1,42 +1,47 @@
-import { useState } from "react";
+import { useForm } from "react-hook-form";
 import Container from "../Container";
 import illustration from "/imgs/form/growth.png";
 import { addDoc, collection } from "firebase/firestore";
 import { firestoreDB } from "../../utils/firebaseUtils";
+import ErrorMessage from "./ErrorMessage";
+import { useRef } from "react";
+
+type FormData = {
+  name: string;
+  phone: string;
+  email: string;
+  service: string;
+  message: string;
+};
 
 function ContactForm() {
-  const inputStyles = `px-4 py-3 text-lg bg-black border border-[#ffffff34] rounded-lg text-white w-full`;
-  const labelStyles = `flex flex-col gap-2`;
-  const labelTitleStyles = `text-lg`;
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<FormData>();
+  const statusElement = useRef<HTMLParagraphElement>(null);
 
-  const [status, setStatus] = useState<"initial" | "submitting" | "sended">("initial");
+  async function onSubmit(data: FormData) {
+    try {
+      await addDoc(collection(firestoreDB, "messages"), data);
+      alert("تم إرسال الرسالة بنجاح!");
+      if (statusElement.current) {
+        statusElement.current.textContent = "تم الإرسال بنجاح.";
+        statusElement.current.classList.add("bg-green-500");
+        statusElement.current.classList.remove("hidden");
+      }
+      reset();
+    } catch (error) {
+      console.error("Error submitting form:", error);
 
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    service: "",
-    message: "",
-  });
-
-  function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
-  ) {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  }
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-
-    formData.name.length < 4
-      ? alert("الاسم يجب أن يتكون من 4 أحرف على الأقل.")
-      : setStatus("submitting");
-
-    // try {
-    //   const docRef = await addDoc(collection(firestoreDB, "messages"), formData);
-    // } catch (error) {
-    //   console.log(error);
-    // }
+      if (statusElement.current) {
+        statusElement.current.textContent = "يرجى المحاولة مرة أخرى.";
+        statusElement.current.classList.add("bg-red-500");
+        statusElement.current.classList.remove("hidden");
+      }
+    }
   }
 
   return (
@@ -48,79 +53,89 @@ function ContactForm() {
         <div className="mx-auto w-full max-w-lg rounded-lg border border-[#ffffff34] px-4 py-8">
           <h4 className="text-center text-3xl text-background">تواصل معنا</h4>
           <hr className="my-6 border-[#ffffff34]" />
-          <form className="grid gap-4" onSubmit={handleSubmit}>
-            <label className={labelStyles}>
-              <span className={labelTitleStyles}>الاسم:</span>
+          <form className="grid gap-4" onSubmit={handleSubmit(onSubmit)}>
+            <label className="flex flex-col gap-2">
+              <span className="text-lg">الاسم:</span>
               <input
                 type="text"
-                name="name"
+                {...register("name", {
+                  required: "يجب إدخال الاسم",
+                  minLength: { value: 4, message: "يجب أن يتكون الاسم من 4 أحرف على الأقل" },
+                })}
                 placeholder="الاسم"
-                className={inputStyles}
-                onChange={handleChange}
+                className="w-full rounded-lg border border-[#ffffff34] bg-black px-4 py-3 text-lg text-white"
               />
-              <p className="text-sm text-red-500" id="name-error">
-                يجب أن يتكون الاسم من 4 أحرف على الأقل.
-              </p>
+              {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
             </label>
 
-            <label className={labelStyles}>
-              <span className={labelTitleStyles}>رقم الهاتف:</span>
+            <label className="flex flex-col gap-2">
+              <span className="text-lg">رقم الهاتف:</span>
               <input
                 type="tel"
-                name="phone"
+                {...register("phone", { required: "يجب إدخال رقم الهاتف" })}
                 placeholder="رقم الهاتف"
-                className={inputStyles}
-                onChange={handleChange}
+                className="w-full rounded-lg border border-[#ffffff34] bg-black px-4 py-3 text-lg text-white"
               />
+              {errors.phone && <ErrorMessage>{errors.phone.message}</ErrorMessage>}
             </label>
 
-            <label className={labelStyles}>
-              <span className={labelTitleStyles}>البريد الإلكتروني:</span>
+            <label className="flex flex-col gap-2">
+              <span className="text-lg">البريد الإلكتروني:</span>
               <input
                 type="email"
-                name="email"
+                {...register("email", {
+                  required: "يجب إدخال البريد الإلكتروني",
+                  pattern: {
+                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                    message: "يجب إدخال بريد إلكتروني صحيح",
+                  },
+                })}
                 placeholder="البريد الإلكتروني"
-                className={inputStyles}
-                onChange={handleChange}
+                className="w-full rounded-lg border border-[#ffffff34] bg-black px-4 py-3 text-lg text-white"
               />
+              {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
             </label>
 
-            <label className={labelStyles}>
-              <span className={labelTitleStyles}>الخدمة المطلوبة:</span>
-              <select className={inputStyles} name="service" onChange={handleChange}>
-                <option value="" disabled>
-                  اختر خدمة
-                </option>
+            <label className="flex flex-col gap-2">
+              <span className="text-lg">الخدمة المطلوبة:</span>
+              <select
+                {...register("service", { required: "يجب اختيار خدمة" })}
+                className="w-full rounded-lg border border-[#ffffff34] bg-black px-4 py-3 text-lg text-white"
+              >
+                <option value="">اختر خدمة</option>
                 <option value="web-dev">تصميم المواقع</option>
                 <option value="social-media">تطوير</option>
               </select>
+              {errors.service && <ErrorMessage>{errors.service.message}</ErrorMessage>}
             </label>
 
-            <label className={labelStyles}>
-              <span className={labelTitleStyles}>الرسالة:</span>
+            <label className="flex flex-col gap-2">
+              <span className="text-lg">الرسالة:</span>
               <textarea
+                {...register("message", {
+                  required: "يجب إدخال الرسالة",
+                  minLength: { value: 10, message: "يجب أن تكون الرسالة 10 أحرف على الأقل" },
+                })}
                 placeholder="الرسالة"
-                name="message"
-                className={inputStyles}
+                className="w-full rounded-lg border border-[#ffffff34] bg-black px-4 py-3 text-lg text-white"
                 rows={4}
-                onChange={handleChange}
               />
+              {errors.message && <ErrorMessage>{errors.message.message}</ErrorMessage>}
             </label>
 
-            <button className="mt-4 w-full rounded-lg bg-main px-4 py-2 text-lg font-bold text-background duration-medium hover:border-background hover:bg-background hover:text-main">
-              إرسال
+            <button
+              className="mt-4 w-full rounded-lg bg-main px-4 py-2 text-lg font-bold text-background duration-medium hover:border-background hover:bg-background hover:text-main"
+              type="submit"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "جاري الإرسال..." : "إرسال"}
             </button>
           </form>
+          <p ref={statusElement} className="mt-3 hidden rounded-lg py-2 text-center font-bold"></p>
         </div>
       </Container>
     </section>
   );
 }
-export default ContactForm;
 
-//
-// الاسم
-// رقم الهاتف
-// الإيميل
-// الرسالة
-// الخدمة المطلوبة
+export default ContactForm;
