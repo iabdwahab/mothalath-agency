@@ -25,7 +25,10 @@ function ServiceLanding() {
         <div className="grid items-center pt-[30vh] max-md:text-center md:grid-cols-2 md:pt-[35vh]">
           <div className="text-l flex flex-col gap-4 font-bold">
             <MainHeading>{landing_heading[websiteLang]}</MainHeading>
-            <p className="bg-gradient-to-l from-[#999999] to-[#ffffff] bg-clip-text text-transparent">
+            <p
+              data-aos="fade-up"
+              className="bg-gradient-to-l from-[#999999] to-[#ffffff] bg-clip-text text-transparent"
+            >
               {landing_description[websiteLang]}
             </p>
           </div>

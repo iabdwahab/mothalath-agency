@@ -4,7 +4,7 @@ type propsType = { children: ReactNode; className?: string };
 
 function SectionHeading({ children, className = "" }: propsType) {
   return (
-    <h3 className={`text-center text-[32px] font-bold ${className}`}>
+    <h3 data-aos="fade-up" className={`text-center text-[32px] font-bold ${className}`}>
       {children}
     </h3>
   );

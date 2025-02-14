@@ -3,11 +3,15 @@ import { StepType } from "../../../types/homepageTypes";
 import { WebsiteLangContext } from "../../../App";
 import { useContext } from "react";
 
-function StepDesktop({ data }: { data: StepType }) {
+function StepDesktop({ data, index }: { data: StepType; index: number }) {
   const { websiteLang } = useContext(WebsiteLangContext);
 
   return (
-    <div className="flex flex-col items-center gap-2">
+    <div
+      className="flex flex-col items-center gap-2"
+      data-aos="zoom-in-up"
+      data-aos-delay={index * 150}
+    >
       <p className="text-nowrap text-sm">{data.title[websiteLang]}</p>
       <div>
         <div className="h-16 w-[1px] bg-white max-sm:h-10"></div>

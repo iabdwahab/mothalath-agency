@@ -13,7 +13,7 @@ function StepMobile({ title, description, className }: propsType) {
   const { websiteLang } = useContext(WebsiteLangContext);
 
   return (
-    <div className={`grid grid-cols-[60px,1fr] gap-3 ${className}`}>
+    <div className={`grid grid-cols-[60px,1fr] gap-3 ${className}`} data-aos="fade-up">
       <div className="flex items-center justify-center text-black">
         <img src={triangle} alt="Triangle Icon" className="w-8" />
       </div>

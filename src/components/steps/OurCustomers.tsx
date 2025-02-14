@@ -8,18 +8,12 @@ function OurCustomers() {
   // Convert to an array, then filter founded logo.
   // console.log(our_customers); // Uncomment this to show the data from API.
   // Doing this because structure of the API.
-  const customersLogosList = Object.values(our_customers).filter(
-    (item) => item,
-  );
+  const customersLogosList = Object.values(our_customers).filter((item) => item);
 
   const customersLogosElements = customersLogosList.map((logo, index) => {
     return (
-      <div key={index} className="flex items-center justify-center">
-        <img
-          src={logo.url}
-          alt={logo.alt}
-          className="h-10 w-24 object-contain"
-        />
+      <div key={index} className="flex items-center justify-center" data-aos="fade-up">
+        <img src={logo.url} alt={logo.alt} className="h-10 w-24 object-contain" />
       </div>
     );
   });

@@ -16,7 +16,9 @@ function Articles() {
   return (
     <section className="py-section" id="articles">
       <Container className="flex flex-col gap-section py-section">
-        <SectionHeading>{translations.our_articles[websiteLang]}</SectionHeading>
+        <SectionHeading className="capitalize">
+          {translations.our_articles[websiteLang]}
+        </SectionHeading>
 
         <div className="grid-cards-cols gap-cards">
           {articles.map((article: ArticleType) => (

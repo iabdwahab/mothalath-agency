@@ -16,7 +16,9 @@ function ServicesContainer() {
 
   return (
     <div>
-      <h4 className="mb-5 text-background">{features_title[websiteLang]}</h4>
+      <h4 data-aos="fade-up" className="mb-5 text-background">
+        {features_title[websiteLang]}
+      </h4>
 
       <div className="grid-cards-cols gap-6">
         {featuresList.map((feature, index) => {

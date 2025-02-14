@@ -8,7 +8,10 @@ function TestimonialsCard({ testimonial }: { testimonial: TestimonialType }) {
   const { customer_image, customer_name, customer_email, rating, testimonial_text } = testimonial;
 
   return (
-    <div className="grid grid-cols-[40px,1fr] gap-4 rounded-xl border border-half-white p-6 text-sm md:p-8">
+    <div
+      data-aos="fade-up"
+      className="grid grid-cols-[40px,1fr] gap-4 rounded-xl border border-half-white p-6 text-sm md:p-8"
+    >
       <div className="overflow-hidden">
         <img
           src={customer_image.url}

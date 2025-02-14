@@ -11,7 +11,7 @@ function Article({ data }: { data: ArticleType }) {
   const { article_image, title, summary } = acf;
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4" data-aos="fade-up">
       <Link
         to={`#${slug}`}
         className="group relative flex items-center justify-center overflow-hidden rounded-xl"

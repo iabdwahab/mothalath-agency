@@ -15,6 +15,7 @@ function Question({ title, description }: QuestionType) {
 
   return (
     <div
+      data-aos="fade-up"
       className={`grid grid-cols-question-card gap-x-question-card rounded-2xl border border-half-white px-3 py-4 md:px-8`}
     >
       <button

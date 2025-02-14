@@ -21,10 +21,14 @@ function TextSide() {
 
   return (
     <div className="flex flex-col justify-center gap-8 max-lg:text-center">
-      <h4 className="text-3xl">{title[websiteLang]}</h4>
-      <p className="text-xl font-light">{description[websiteLang]}</p>
+      <h4 className="text-3xl" data-aos="fade-up">
+        {title[websiteLang]}
+      </h4>
+      <p className="text-xl font-light" data-aos="fade-up">
+        {description[websiteLang]}
+      </p>
       <div className="flex flex-col gap-16 lg:flex-col-reverse lg:gap-8">
-        <div className="flex gap-3 max-lg:justify-center">
+        <div className="flex gap-3 max-lg:justify-center" data-aos="fade-up">
           <BackButton />
           <NextButton />
         </div>

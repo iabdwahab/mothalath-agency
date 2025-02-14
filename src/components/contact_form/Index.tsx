@@ -45,10 +45,14 @@ function ContactForm() {
   return (
     <section className="bg-black py-section capitalize text-white">
       <Container className="grid-cols-2 lg:grid">
-        <div className="flex items-center justify-center max-lg:hidden">
+        <div data-aos="fade-left" className="flex items-center justify-center max-lg:hidden">
           <img src={illustration} alt="Illustration" className="w-full" />
         </div>
-        <div className="mx-auto w-full max-w-lg rounded-lg border border-[#ffffff34] px-4 py-8">
+
+        <div
+          data-aos="fade-right"
+          className="mx-auto w-full max-w-lg rounded-lg border border-[#ffffff34] px-4 py-8"
+        >
           <h4 className="text-center text-3xl text-background">
             {translations.contact_us[websiteLang]}
           </h4>

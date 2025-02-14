@@ -7,14 +7,11 @@ type propsType = {
   href?: string;
 };
 
-function SectionButtonLink({
-  children,
-  className = "",
-  href = "#",
-}: propsType) {
+function SectionButtonLink({ children, className = "", href = "#" }: propsType) {
   return (
     <Link
       to={href}
+      data-aos="fade-up"
       className={`block rounded-full px-8 py-4 text-center text-sm font-black ${className}`}
     >
       {children}

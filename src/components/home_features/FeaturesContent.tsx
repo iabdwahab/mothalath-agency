@@ -20,6 +20,7 @@ function FeaturesContent({ data }: propsType) {
         dangerouslySetInnerHTML={{
           __html: heading[websiteLang],
         }}
+        data-aos="fade-up"
       >
         {/* <span className="bg-gradient-to-l from-supporter to-background bg-clip-text text-supporter text-transparent">
       نحن لا نقوم
@@ -29,7 +30,9 @@ function FeaturesContent({ data }: propsType) {
       النمو المستدام
     </span> */}
       </h2>
-      <p className="gradient-text">{description[websiteLang]}</p>
+      <p className="gradient-text" data-aos="fade-up">
+        {description[websiteLang]}
+      </p>
     </div>
   );
 }

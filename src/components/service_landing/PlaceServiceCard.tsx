@@ -8,6 +8,7 @@ function PlaceServiceCard() {
 
   return (
     <a
+      data-aos="fade-up"
       href="#"
       className="group flex w-full flex-col justify-between gap-4 rounded-3xl border border-[#FFFFFF14] bg-background px-8 py-10 backdrop-blur-xl duration-medium hover:bg-main"
     >
