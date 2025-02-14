@@ -11,7 +11,6 @@ import { ArticleType } from "./types/types";
 function Articles() {
   const { websiteLang } = useContext(WebsiteLangContext);
   const { articles } = useArticlesData();
-  console.log(articles);
 
   return (
     <section className="py-section" id="articles">

@@ -107,8 +107,10 @@ function ContactForm() {
                 className="w-full rounded-lg border border-[#ffffff34] bg-black px-4 py-3 text-lg text-white"
               >
                 <option value="">{translations.service_choose[websiteLang]}</option>
-                {servicesList.map((service) => (
-                  <option value={service.acf.name.en}>{service.acf.name[websiteLang]}</option>
+                {servicesList.map((service, index) => (
+                  <option key={index} value={service.acf.name.en}>
+                    {service.acf.name[websiteLang]}
+                  </option>
                 ))}
               </select>
               {errors.service && <ErrorMessage>{errors.service.message}</ErrorMessage>}

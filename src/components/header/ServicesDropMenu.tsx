@@ -15,8 +15,8 @@ function ServicesDropMenu({ isOpen }: { isOpen: boolean }) {
       <span className="absolute bottom-[calc(100%)] left-0 h-12 w-full"></span>
       <div className="absolute bottom-full left-1/2 -translate-x-1/2 border-x-[10px] border-b-[10px] border-t-0 border-solid border-x-transparent border-b-main"></div>
       <div className="grid gap-3">
-        {list.map((service) => (
-          <div className="flex items-center gap-2">
+        {list.map((service, index) => (
+          <div key={index} className="flex items-center gap-2">
             <img src={triangle} alt="Triangel Icon" className="w-5" />
             <Link
               to={`/services/${service.slug}`}
