@@ -3,8 +3,6 @@ import MainLayout from "./layouts/MainLayout";
 import ServicePage from "./pages/ServicePage";
 import HomePage from "./pages/HomePage";
 import { createContext, useEffect, useState } from "react";
-import MessagesPage from "./pages/MessagesPage";
-import MessagesLayout from "./layouts/MessagesLayout";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -39,11 +37,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout />}>
-            <Route path="/" element={<HomePage />} />
+            <Route index element={<HomePage />} />
             <Route path="/services/:service_slug" element={<ServicePage />} />
-          </Route>
-          <Route path="/messages" element={<MessagesLayout />}>
-            <Route path="/messages" element={<MessagesPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

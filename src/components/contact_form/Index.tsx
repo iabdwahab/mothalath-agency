@@ -1,8 +1,6 @@
 import { useForm } from "react-hook-form";
 import Container from "../Container";
 import illustration from "/imgs/form/growth.png";
-import { addDoc, collection } from "firebase/firestore";
-import { firestoreDB } from "../../utils/firebaseUtils";
 import ErrorMessage from "./ErrorMessage";
 import { useContext, useRef } from "react";
 import translations from "../../tanslations/translations";
@@ -23,7 +21,11 @@ function ContactForm() {
 
   async function onSubmit(data: FormData) {
     try {
-      await addDoc(collection(firestoreDB, "messages"), data);
+      const response = await fetch("https://mothalthagency.com/wp-json/custom/v1/submit-form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
 
       if (statusElement.current) {
         statusElement.current.textContent = translations.send_succes[websiteLang];
