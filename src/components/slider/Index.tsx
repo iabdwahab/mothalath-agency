@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Container from "../Container";
 import ImageSide from "./ImageSide";
 import TextSide from "./TextSide";
-// import { sliderData } from "./data";
 import { SliderContext } from "./context";
 import { slideDataType } from "./types";
 import { API_BASE } from "../../global_data/globalData";
@@ -31,7 +30,7 @@ function SliderSection() {
       >
         <section
           id="slider"
-          className="p bg-lines bg-contain bg-no-repeat py-section max-lg:bg-no-repeat lg:bg-center"
+          className="bg-lines bg-cover bg-no-repeat py-section max-lg:bg-no-repeat lg:bg-top"
         >
           <Container className="grid gap-12 lg:grid-cols-2">
             <TextSide />
