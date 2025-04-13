@@ -5,7 +5,7 @@ import ErrorMessage from "./ErrorMessage";
 import { useContext, useRef } from "react";
 import translations from "../../tanslations/translations";
 import { WebsiteLangContext } from "../../App";
-import useServicesList from "../../data/useServicesList";
+import useServicesList from "../header/data/useServicesList";
 import { FormData } from "./types";
 
 function ContactForm() {
