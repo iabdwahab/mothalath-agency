@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { ServicesListType } from "../../../types/servicesListTypes";
-import { API_BASE } from "../../../global_data/globalData";
+import { ServicesListType } from "../types/servicesListTypes";
+import { API_BASE } from "../global_data/globalData";
 
 function useServicesList() {
   const [list, setList] = useState<ServicesListType[]>([]);
