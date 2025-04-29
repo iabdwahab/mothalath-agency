@@ -13,7 +13,7 @@ function OurCustomers() {
   const customersLogosElements = customersLogosList.map((logo, index) => {
     return (
       <div key={index} className="flex items-center justify-center" data-aos="fade-up">
-        <img src={logo.url} alt={logo.alt} className="h-10 w-24 object-contain" />
+        <img src={logo.url} alt={logo.alt} className="h-14 w-28 object-contain" />
       </div>
     );
   });
