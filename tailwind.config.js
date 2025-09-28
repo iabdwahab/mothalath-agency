@@ -49,6 +49,9 @@ export default {
           "0%": { opacity: "1", transform: "translateY(40px)" },
         },
       },
+      fontFamily: {
+        cairo: ["Cairo", "sans-serif"],
+      },
     },
   },
   plugins: [],
